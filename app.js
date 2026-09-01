@@ -1,11 +1,39 @@
-// Initialize Lucide Icons
+// Initialize Lucide Icons & Image Error Fallbacks
 document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) {
     lucide.createIcons();
   }
+  setupImageFallbacks();
   initSlideDeck();
   initNavigation();
 });
+
+// Auto Fallback for Image casing & paths (e.g. image1.png vs Image1.png vs assets/images/image1.png)
+function setupImageFallbacks() {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    img.addEventListener('error', function() {
+      if (this.dataset.retried) return;
+      this.dataset.retried = 'true';
+      
+      const currentSrc = this.getAttribute('src');
+      if (!currentSrc) return;
+
+      const filename = currentSrc.split('/').pop();
+      // Try uppercase 'Image' if was 'image'
+      if (filename.startsWith('image')) {
+        const capitalName = filename.replace(/^image/, 'Image');
+        this.src = capitalName;
+      } else if (filename.startsWith('Image')) {
+        const lowerName = filename.replace(/^Image/, 'image');
+        this.src = lowerName;
+      } else {
+        // Try with assets/images/ prefix
+        this.src = 'assets/images/' + filename;
+      }
+    });
+  });
+}
 
 // Toast notification helper
 function copyToClipboard(text, message = '복사되었습니다!') {
