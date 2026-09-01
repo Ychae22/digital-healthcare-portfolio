@@ -1,0 +1,149 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  --primary-navy: #0A2D5A;
+  --medical-blue: #0D5AA7;
+  --accent-gold: #FFCC00;
+  --accent-light-gold: #FFF382;
+  --bg-slate: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --text-dark: #1E293B;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+}
+
+* {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-nav {
+  background: rgba(10, 45, 90, 0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gradient-navy {
+  background: linear-gradient(135deg, #0A2D5A 0%, #0D5AA7 60%, #1772CD 100%);
+}
+
+.badge-gold {
+  background-color: #FFCC00;
+  color: #093D72;
+  font-weight: 700;
+}
+
+.badge-blue {
+  background-color: #EBF3FA;
+  color: #0D5AA7;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(13, 90, 167, 0.15);
+}
+
+/* Image zoom on hover */
+.img-zoom-container {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+.img-zoom-container img {
+  transition: transform 0.35s ease;
+}
+.img-zoom-container:hover img {
+  transform: scale(1.04);
+}
+
+/* Slide Deck Mode Overlay */
+#slideDeckView {
+  display: none;
+}
+#slideDeckView.active {
+  display: flex;
+}
+
+.slide-item {
+  display: none;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slide-item.active {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Skill bar animation */
+.skill-fill {
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Lightbox Modal */
+#lightboxModal {
+  display: none;
+}
+#lightboxModal.active {
+  display: flex;
+}
+
+/* Toast */
+#toastNotification {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#toastNotification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .glass-card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+}

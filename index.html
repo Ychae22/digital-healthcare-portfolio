@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>채유진 | 디지털 헬스케어 기획자 포트폴리오 (Digital Healthcare Portfolio)</title>
+  <meta name="description" content="일상 속 건강한 변화를 이끌어내는 디지털 헬스케어 기획자 채유진의 포트폴리오 웹사이트입니다. 분자생물학 전공과 AI·데이터 기술을 융합한 혁신 프로젝트를 소개합니다." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="채유진 | 디지털 헬스케어 기획자 포트폴리오" />
+  <meta property="og:description" content="임상 지식과 AI 기술을 연결하여 일상의 건강한 변화를 만들어갑니다." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A2D5A',
+              blue: '#0D5AA7',
+              lightBlue: '#1772CD',
+              gold: '#FFCC00',
+              goldLight: '#FFF382',
+              bg: '#F8FAFC',
+              dark: '#1E293B'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-amber-300 selection:text-slate-900">
+
+  <!-- ======================================================== -->
+  <!-- TOP NAVIGATION BAR                                       -->
+  <!-- ======================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center space-x-3 text-white group">
+        <div class="w-9 h-9 rounded-lg bg-brand-gold text-brand-navy font-black flex items-center justify-center text-lg shadow-md group-hover:scale-105 transition-transform">
+          CY
+        </div>
+        <div>
+          <span class="font-bold text-base tracking-tight block leading-tight">채유진</span>
+          <span class="text-[11px] text-amber-300 font-medium tracking-wider uppercase">Digital Healthcare</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm text-slate-200">
+        <a href="#hero" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors">소개</a>
+        <a href="#competencies" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors">핵심역량</a>
+        <a href="#profile" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors">프로필 & 이력</a>
+        <a href="#team-projects" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors">팀 프로젝트</a>
+        <a href="#individual-projects" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors">개인 프로젝트</a>
+        <a href="#contact" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors">연락처</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- Presentation Mode Toggle -->
+        <button id="toggleSlideDeckBtn" class="flex items-center space-x-1.5 bg-brand-gold hover:bg-amber-400 text-brand-navy font-bold text-xs sm:text-sm px-3.5 py-2 rounded-lg shadow transition-all hover:scale-105" title="원본 PPT 슬라이드 모드로 감상하기">
+          <i data-lucide="presentation" class="w-4 h-4"></i>
+          <span>슬라이드 발표 모드</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" class="md:hidden text-white p-2 rounded-md hover:bg-white/10" aria-label="메뉴 열기">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-navy/95 border-b border-white/10 px-4 pt-2 pb-4 space-y-1 text-sm text-slate-200">
+      <a href="#hero" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-white/10">소개</a>
+      <a href="#competencies" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-white/10">핵심역량</a>
+      <a href="#profile" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-white/10">프로필 & 이력</a>
+      <a href="#team-projects" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-white/10">팀 프로젝트</a>
+      <a href="#individual-projects" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-white/10">개인 프로젝트</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md hover:bg-white/10">연락처</a>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- MAIN SCROLL PORTFOLIO VIEW                               -->
+  <!-- ======================================================== -->
+  <main id="portfolioView" class="pt-16">
+
+    <!-- 1. HERO SECTION (Slide 1 & Slide 3 Combined High-Impact) -->
+    <section id="hero" class="relative gradient-navy text-white py-20 sm:py-28 overflow-hidden">
+      <!-- Background Ambient Glows -->
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-400/20 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-amber-400/15 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Main Introduction -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            <div class="inline-flex items-center space-x-2 bg-brand-gold text-brand-navy font-extrabold text-xs sm:text-sm px-4 py-1.5 rounded-full shadow-md uppercase tracking-wider">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>DIGITAL HEALTHCARE</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white">
+              일상 속 건강한 변화를 이끌어내는<br />
+              디지털 헬스케어 기획자,<br />
+              <span class="text-brand-gold underline decoration-brand-gold/40 underline-offset-8">‘채유진’</span> 입니다
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed max-w-2xl">
+              임상 지식과 AI 기술을 연결하여 일상의 건강한 변화를 만들어갑니다.<br class="hidden sm:inline" />
+              생명과학 기반의 도메인 이해도와 비전 AI·머신러닝 프로토타이핑 역량을 바탕으로 실효성 있는 헬스케어 솔루션을 기획합니다.
+            </p>
+
+            <!-- Key Quick Info Chips -->
+            <div class="pt-4 flex flex-wrap gap-3 text-sm">
+              <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/15">
+                <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i>
+                <span>yujins2chae@gmail.com</span>
+                <button onclick="copyToClipboard('yujins2chae@gmail.com', '이메일 주소가 복사되었습니다!')" class="ml-1 text-slate-300 hover:text-white" title="복사">
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/15">
+                <i data-lucide="phone" class="w-4 h-4 text-brand-gold"></i>
+                <span>010-8918-8342</span>
+                <button onclick="copyToClipboard('010-8918-8342', '전화번호가 복사되었습니다!')" class="ml-1 text-slate-300 hover:text-white" title="복사">
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <a href="https://github.com/ychae22" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-4 py-2 rounded-xl border border-white/15 transition-all text-amber-300 hover:text-amber-200">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span>github.com/ychae22</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+              </a>
+              <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/15">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                <span>Seoul, Korea</span>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="pt-4 flex flex-wrap gap-4">
+              <a href="#team-projects" class="inline-flex items-center space-x-2 bg-brand-gold hover:bg-amber-400 text-brand-navy font-bold px-6 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <span>프로젝트 탐색하기</span>
+                <i data-lucide="arrow-down" class="w-4 h-4"></i>
+              </a>
+              <a href="#profile" class="inline-flex items-center space-x-2 bg-white/15 hover:bg-white/25 text-white font-semibold px-6 py-3.5 rounded-xl border border-white/20 transition-all">
+                <i data-lucide="user" class="w-4 h-4"></i>
+                <span>이력 및 역량 보기</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Feature Banner / Vision Card -->
+          <div class="lg:col-span-5">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 text-slate-800 shadow-2xl border-white/20 relative overflow-hidden">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <span class="inline-block px-3 py-1 bg-blue-50 text-brand-blue text-xs font-bold rounded-lg tracking-wider">PORTFOLIO SUMMARY</span>
+                <span class="text-xs text-slate-500 font-semibold">2026</span>
+              </div>
+
+              <div class="py-6 space-y-4">
+                <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-5 rounded-xl text-center shadow">
+                  <span class="text-xs uppercase tracking-widest text-amber-300 font-semibold block">FOCUS AREA</span>
+                  <h3 class="text-2xl font-black mt-1 tracking-tight">MEDICAL × AI</h3>
+                  <p class="text-xs text-blue-100 mt-1">임상 프로토콜 고증과 최신 AI 모델을 융합한 헬스케어 솔루션</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                  <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 text-left">
+                    <div class="flex items-center space-x-1.5 text-brand-blue font-bold text-xs">
+                      <i data-lucide="dna" class="w-4 h-4"></i>
+                      <span>Domain Knowledge</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-1">부산대 분자생물학 학사<br />GCP / IRB 임상 교육 수료</p>
+                  </div>
+                  <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 text-left">
+                    <div class="flex items-center space-x-1.5 text-brand-blue font-bold text-xs">
+                      <i data-lucide="cpu" class="w-4 h-4"></i>
+                      <span>Prototyping</span>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-1">Python, Streamlit, Vision AI<br />신속한 PoC & 기획 검증</p>
+                  </div>
+                </div>
+
+                <!-- Featured Projects Quick Pills -->
+                <div class="space-y-2 pt-2 text-xs">
+                  <div class="flex items-center justify-between p-2.5 bg-blue-50/70 rounded-lg text-slate-700 font-medium">
+                    <span class="flex items-center space-x-2">
+                      <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                      <span>MediSore (욕창 예방 체위 코칭 & AI 상처 관리)</span>
+                    </span>
+                    <span class="text-[11px] text-blue-700 font-bold">비전 AI</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 bg-amber-50/70 rounded-lg text-slate-700 font-medium">
+                    <span class="flex items-center space-x-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                      <span>힐링레터 (파킨슨 조기 선별 & 안심 서비스)</span>
+                    </span>
+                    <span class="text-[11px] text-amber-700 font-bold">ML 타건분석</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 bg-emerald-50/70 rounded-lg text-slate-700 font-medium">
+                    <span class="flex items-center space-x-2">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                      <span>Heimlich Hero (리듬 액션 응급처치 교육)</span>
+                    </span>
+                    <span class="text-[11px] text-emerald-700 font-bold">게이미피케이션</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 bg-purple-50/70 rounded-lg text-slate-700 font-medium">
+                    <span class="flex items-center space-x-2">
+                      <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                      <span>환장연애 (관계 폭력 조기 인지 & 안전 구제)</span>
+                    </span>
+                    <span class="text-[11px] text-purple-700 font-bold">BaaS 플랫폼</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer CTA inside Card -->
+              <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <span>Chae Yujin Digital Healthcare</span>
+                <span class="text-brand-blue font-bold flex items-center">
+                  Scroll Down <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CORE COMPETENCIES SECTION (Slide 2) -->
+    <section id="competencies" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-brand-blue font-bold text-xs tracking-wider uppercase">
+            CORE COMPETENCIES
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            채유진은 어떤 능력을 가지고 있을까?
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600">
+            의료 도메인 지식부터 데이터 분석, 공감 기반의 기획과 빠른 기술 프로토타이핑까지<br class="hidden sm:inline" />
+            디지털 헬스케어 기획자로서의 <strong class="text-brand-blue">6가지 핵심 강점</strong>을 소개합니다.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Competency 01 -->
+          <div class="glass-card rounded-2xl p-7 hover-lift border border-slate-200/80 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black px-2.5 py-1 bg-brand-navy text-white rounded-md">01</span>
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                  <i data-lucide="dna" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">의료·보건 도메인 전문성</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                분자생물학 전공 및 GCP(임상시험 관리기준) 교육을 수료하였으며, 영문 의학 논문 분석과 IRB 및 의료 데이터 무결성(Data Integrity)에 대한 깊은 이해를 갖추고 있습니다.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 text-xs text-brand-blue font-semibold flex items-center">
+              <span>부산대 분자생물학 · GCP · IRB 수료</span>
+            </div>
+          </div>
+
+          <!-- Competency 02 -->
+          <div class="glass-card rounded-2xl p-7 hover-lift border border-slate-200/80 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black px-2.5 py-1 bg-brand-navy text-white rounded-md">02</span>
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                  <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">Data Literacy</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                사용자 데이터를 직접 추출·분석하며, ERP 데이터 QC 경험을 통해 정량적 데이터에 기반한 확실한 서비스 기획과 논리적 의사결정을 이끕니다.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 text-xs text-brand-blue font-semibold flex items-center">
+              <span>데이터 추출 · ERP QC · 통계 분석</span>
+            </div>
+          </div>
+
+          <!-- Competency 03 -->
+          <div class="glass-card rounded-2xl p-7 hover-lift border border-slate-200/80 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black px-2.5 py-1 bg-brand-navy text-white rounded-md">03</span>
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                  <i data-lucide="target" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">초고령화 페인포인트 포착</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                시니어와 만성질환자의 니즈를 분석하여, 실시간 욕창 관리(MediSore), 파킨슨 선별 기구 등 사회적 요구에 맞닿은 고부가가치 헬스케어 프로젝트를 이끌었습니다.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 text-xs text-brand-blue font-semibold flex items-center">
+              <span>시니어 헬스케어 · 만성질환 니즈 분석</span>
+            </div>
+          </div>
+
+          <!-- Competency 04 -->
+          <div class="glass-card rounded-2xl p-7 hover-lift border border-slate-200/80 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black px-2.5 py-1 bg-brand-navy text-white rounded-md">04</span>
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                  <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">현장 밀착형 공감</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                의료통합봉사회 및 H-점프스쿨 활동으로 취약계층을 곁에서 마주하며, 책상 너머 현장의 진짜 문제를 파악하고 실효성 있는 솔루션을 모색해 왔습니다.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 text-xs text-brand-blue font-semibold flex items-center">
+              <span>독거노인 돌봄 · 교육 봉사 · 현장 관찰</span>
+            </div>
+          </div>
+
+          <!-- Competency 05 -->
+          <div class="glass-card rounded-2xl p-7 hover-lift border border-slate-200/80 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black px-2.5 py-1 bg-brand-navy text-white rounded-md">05</span>
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                  <i data-lucide="message-square-heart" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">유연한 실전 소통력</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                탄탄한 어학 성적(TOEIC Speaking AL / 160점)을 넘어, 부산국제영화제와 피트니스 센터에서 다양한 국적과 연령대의 고객을 응대하며 체득한 실전 커뮤니케이션 역량을 갖췄습니다.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 text-xs text-brand-blue font-semibold flex items-center">
+              <span>토익스피킹 AL · 다국적/다연령 고객 소통</span>
+            </div>
+          </div>
+
+          <!-- Competency 06 -->
+          <div class="glass-card rounded-2xl p-7 hover-lift border border-slate-200/80 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black px-2.5 py-1 bg-brand-navy text-white rounded-md">06</span>
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center">
+                  <i data-lucide="code" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">신속한 프로토타이핑</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                기획서에 머무르지 않고 Python, Streamlit, Vision AI를 자유롭게 활용하여 구상한 아이디어를 실제 작동하는 인터랙티브 서비스로 빠르게 구현하고 검증합니다.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 text-xs text-brand-blue font-semibold flex items-center">
+              <span>Python · Streamlit · MediaPipe · YOLO</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROFILE & RESUME SECTION (Slide 3) -->
+    <section id="profile" class="py-20 bg-slate-50 border-t border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-brand-blue font-bold text-xs tracking-wider uppercase">
+            PROFILE & RESUME
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            채유진 | 이력 및 기술 스택
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600">
+            임상 지식과 AI 기술을 연결하여 일상의 건강한 변화를 만들어갑니다.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Column 1: Academic & Projects & Tech Stack -->
+          <div class="space-y-6">
+            
+            <!-- Academic Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+              <div class="flex items-center space-x-2 text-brand-blue font-bold text-sm mb-4">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                <span class="tracking-wide uppercase">ACADEMIC</span>
+              </div>
+              <div class="space-y-2">
+                <h4 class="text-base font-bold text-slate-900">부산대학교 분자생물학과 졸업</h4>
+                <p class="text-xs text-slate-500 font-medium">2020.03 ~ 2025.08 | 학점 3.87 / 4.5</p>
+                <p class="text-xs text-slate-600 leading-relaxed pt-1">
+                  • PCR 등 분자진단 실험, QC 및 영문 학술 논문 분석
+                </p>
+              </div>
+            </div>
+
+            <!-- Key Projects Summary List -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+              <div class="flex items-center space-x-2 text-brand-blue font-bold text-sm mb-4">
+                <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+                <span class="tracking-wide uppercase">KEY PROJECTS</span>
+              </div>
+              <div class="space-y-4 text-xs">
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="flex items-center justify-between font-bold text-slate-900">
+                    <span class="text-brand-blue">2026.08</span>
+                    <span class="text-slate-800">환장연애</span>
+                  </div>
+                  <p class="text-slate-600 mt-1">관계 폭력 조기 인지 및 신변 안전 구제 플랫폼</p>
+                </div>
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="flex items-center justify-between font-bold text-slate-900">
+                    <span class="text-brand-blue">2026.06</span>
+                    <span class="text-slate-800">MediSore</span>
+                  </div>
+                  <p class="text-slate-600 mt-1">실시간 욕창 예방 체위 코칭 & AI 상처 관리</p>
+                </div>
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="flex items-center justify-between font-bold text-slate-900">
+                    <span class="text-brand-blue">2026.05</span>
+                    <span class="text-slate-800">힐링레터 (PA트라슈)</span>
+                  </div>
+                  <p class="text-slate-600 mt-1">ML 타건 리듬 분석 기반 파킨슨 조기 선별</p>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between font-bold text-slate-900">
+                    <span class="text-brand-blue">2026.05</span>
+                    <span class="text-slate-800">Heimlich Hero</span>
+                  </div>
+                  <p class="text-slate-600 mt-1">의학 고증 기반 리듬액션 응급처치 교육 게임</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech Stack & Tools with Progress Gauges -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+              <div class="flex items-center space-x-2 text-brand-blue font-bold text-sm mb-5">
+                <i data-lucide="sliders" class="w-5 h-5"></i>
+                <span class="tracking-wide uppercase">TECH STACK & TOOLS</span>
+              </div>
+              <div class="space-y-4">
+                
+                <div>
+                  <div class="flex justify-between text-xs font-bold mb-1.5">
+                    <span class="text-slate-800">Python & Streamlit</span>
+                    <span class="text-brand-blue">94%</span>
+                  </div>
+                  <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-brand-blue rounded-full skill-fill" style="width: 94%;"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-bold mb-1.5">
+                    <span class="text-slate-800">Vision AI (MediaPipe / YOLO)</span>
+                    <span class="text-brand-blue">86%</span>
+                  </div>
+                  <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-brand-blue rounded-full skill-fill" style="width: 86%;"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-bold mb-1.5">
+                    <span class="text-slate-800">Data QC & ERP (사방넷 / Excel)</span>
+                    <span class="text-brand-blue">93%</span>
+                  </div>
+                  <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-brand-blue rounded-full skill-fill" style="width: 93%;"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-bold mb-1.5">
+                    <span class="text-slate-800">Service UX & Storyboard</span>
+                    <span class="text-brand-blue">95%</span>
+                  </div>
+                  <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-brand-blue rounded-full skill-fill" style="width: 95%;"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Education & Training & Work Experiences -->
+          <div class="space-y-6">
+            
+            <!-- Education & Training Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+              <div class="flex items-center space-x-2 text-brand-blue font-bold text-sm mb-4">
+                <i data-lucide="book-open" class="w-5 h-5"></i>
+                <span class="tracking-wide uppercase">EDUCATION & TRAINING</span>
+              </div>
+              
+              <div class="space-y-4 text-xs">
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="font-bold text-slate-900 text-sm">2026.05 ~ 현재</div>
+                  <p class="font-semibold text-brand-blue mt-0.5">디지털 AI & 데이터 부트캠프</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • ML/DL 모델링 및 Streamlit 웹 서비스 구현
+                  </p>
+                </div>
+
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="font-bold text-slate-900 text-sm">2026.04</div>
+                  <p class="font-semibold text-brand-blue mt-0.5">국가임상시험지원재단 GCP 교육</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • ICH-GCP E6(R3) 기반 RBM/RBQ 품질관리
+                  </p>
+                </div>
+
+                <div>
+                  <div class="font-bold text-slate-900 text-sm">2026.04</div>
+                  <p class="font-semibold text-brand-blue mt-0.5">고려대학교 의료원 IRB 교육</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • 임상시험 IRB 규정 및 Data Integrity 기준
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Works Experience Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+              <div class="flex items-center space-x-2 text-brand-blue font-bold text-sm mb-4">
+                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                <span class="tracking-wide uppercase">WORKS</span>
+              </div>
+
+              <div class="space-y-4 text-xs">
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="font-bold text-slate-900 text-sm">2025.10 ~ 2026.01</div>
+                  <p class="font-semibold text-slate-800 mt-0.5">모어사이언스 경영지원 인턴</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • ERP 데이터 QC, 분석 기반 커뮤니케이션 증대
+                  </p>
+                </div>
+
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="font-bold text-slate-900 text-sm">2025.09</div>
+                  <p class="font-semibold text-slate-800 mt-0.5">해운대세무서 소득세 처리 임시직</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • 종합소득세 전자신고 접수 및 민원 응대
+                  </p>
+                </div>
+
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="font-bold text-slate-900 text-sm">2025.01 ~ 2025.08</div>
+                  <p class="font-semibold text-slate-800 mt-0.5">쑥 피트니스 인포데스크</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • 회원 DB 및 트레이너 스케줄 Data 관리
+                  </p>
+                </div>
+
+                <div>
+                  <div class="font-bold text-slate-900 text-sm">2023.07 ~ 2023.11</div>
+                  <p class="font-semibold text-slate-800 mt-0.5">부산대학교 분자생물학과 발생학 실험실 학부 연구생</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • 실험 프로토콜 문서화 작업 및 연구 리소스 분류
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 3: Activities, Licenses & Languages, Contact Overview -->
+          <div class="space-y-6">
+            
+            <!-- Activities Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+              <div class="flex items-center space-x-2 text-brand-blue font-bold text-sm mb-4">
+                <i data-lucide="award" class="w-5 h-5"></i>
+                <span class="tracking-wide uppercase">ACTIVITIES</span>
+              </div>
+
+              <div class="space-y-4 text-xs">
+                <div class="pb-3 border-b border-slate-100">
+                  <div class="font-bold text-slate-900 text-sm">2025.03 ~ 2025.08</div>
+                  <p class="font-semibold text-brand-blue mt-0.5">의료통합봉사회</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • 독거노인 치매예방 케어 봉사 활동
+                  </p>
+                </div>
+
+                <div>
+                  <div class="font-bold text-slate-900 text-sm">2024.03 ~ 2024.11</div>
+                  <p class="font-semibold text-brand-blue mt-0.5">현대차그룹 대학생 교육봉사단 [H-점프스쿨]</p>
+                  <p class="text-slate-600 mt-1 leading-relaxed">
+                    • 지역 아동 센터 영어 교육 봉사
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Licenses & Languages Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+              <div class="flex items-center space-x-2 text-brand-blue font-bold text-sm mb-4">
+                <i data-lucide="badge-check" class="w-5 h-5"></i>
+                <span class="tracking-wide uppercase">LICENSES & LANGUAGES</span>
+              </div>
+
+              <div class="space-y-3 text-xs">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-slate-900 block">TOEIC Speaking</span>
+                    <span class="text-brand-blue font-extrabold">AL / 160점</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500 font-semibold">2026.05</span>
+                </div>
+
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-slate-900 block">TOEIC</span>
+                    <span class="text-brand-blue font-extrabold">875점</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500 font-semibold">2025.10</span>
+                </div>
+
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-slate-900 block">안전교육지도사</span>
+                    <span class="text-brand-blue font-extrabold">1급</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500 font-semibold">2025.01</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Contact Box -->
+            <div class="bg-gradient-to-br from-brand-navy to-brand-blue text-white rounded-2xl p-6 shadow-md space-y-3">
+              <h4 class="font-bold text-sm text-brand-gold flex items-center space-x-1.5">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>GET IN TOUCH</span>
+              </h4>
+              <p class="text-xs text-blue-100 leading-relaxed">
+                디지털 헬스케어 기획, 의료 AI 프로젝트 등 협업 및 채용에 관한 문의는 언제든 환영합니다.
+              </p>
+              <div class="pt-2">
+                <a href="mailto:yujins2chae@gmail.com" class="block text-center py-2 bg-brand-gold hover:bg-amber-400 text-brand-navy font-bold rounded-lg text-xs shadow transition-all">
+                  yujins2chae@gmail.com 메일 보내기
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. TEAM PROJECTS SECTION (Slide 4, 5, 6, 7) -->
+    <section id="team-projects" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-brand-blue font-bold text-xs tracking-wider uppercase">
+            01. TEAM PROJECTS
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            디지털 헬스케어 팀 프로젝트
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600">
+            의학적 가이드라인 고증과 AI 비전·머신러닝 기술을 결합하여 실제 동작하는 프로토타입을 기획 및 구현했습니다.
+          </p>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PROJECT 01: MediSore (Slide 5)                           -->
+        <!-- ======================================================== -->
+        <article class="mb-20 bg-slate-50/80 rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
+            <div>
+              <span class="inline-block px-3 py-1 bg-brand-navy text-white text-xs font-bold rounded-md mb-2">PROJECT 01</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900">
+                MediSore
+              </h3>
+              <p class="text-sm font-semibold text-brand-blue mt-1">
+                비전 AI & 머신러닝(ML) 기반 욕창 예방 체위 코칭 및 욕창 관리 서비스
+              </p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="px-3 py-1.5 bg-blue-100 text-brand-blue font-bold text-xs rounded-lg">비전 AI</span>
+              <span class="px-3 py-1.5 bg-emerald-100 text-emerald-800 font-bold text-xs rounded-lg">헬스케어</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">OVERVIEW</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  요양기관, 비전문 간병인, 가족 보호자를 위한 욕창 고위험 환자의 주기적인 체위 변경과 상처 상태 관리를 지원하는 지능형 솔루션입니다. 사진 한 장으로 신체선열을 정밀 측정하고 NPUAP 표준 상처 단계를 실시간 판정합니다.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
+                <div class="space-y-1.5 text-xs text-slate-700">
+                  <p><strong class="text-slate-900">Language:</strong> JavaScript (ES6+), Python 3.11</p>
+                  <p><strong class="text-slate-900">AI Engine:</strong> MediaPipe Pose Estimation, Vision Classifier</p>
+                  <p><strong class="text-slate-900">Library:</strong> Canvas 2D, ReportLab, Web APIs</p>
+                  <p><strong class="text-slate-900">Data & Report:</strong> NPUAP 4-Stage Classification, 7-Day Care Log</p>
+                  <p><strong class="text-slate-900">Tool / Deploy:</strong> Visual Studio Code, GitHub</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">KEY RESULTS</h4>
+                <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
+                  <li><strong>NPUAP 표준 기준:</strong> Stage 1~4 단계별 맞춤 드레싱 가이드 연동</li>
+                  <li><strong>MediaPipe 33개 관절 좌표 기반:</strong> 30° 측위 기울기 각도 및 압력 분산율 시각화</li>
+                  <li><strong>ReportLab A4 생성:</strong> 모바일 기록과 간호기록지 양식을 매핑한 7일 관리기록지 A4 PDF 생성</li>
+                  <li><strong>사용자 경험 최적화:</strong> 초보 간병인을 위한 촬영 가이드 및 비전문가 맞춤 직관적 UI/UX 구축</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Image Grid (6 Feature Images) -->
+            <div class="lg:col-span-7">
+              <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-3 flex items-center justify-between">
+                <span>SYSTEM & UI SCREENS (클릭 시 확대)</span>
+                <span class="text-[11px] text-brand-blue font-bold">6개 핵심 기능</span>
+              </h4>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                
+                <!-- Feature 1 -->
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image2.png', '2시간 순환 체위 스케줄러')">
+                  <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image2.png" alt="2시간 순환 체위 스케줄러" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[2시간 순환 체위 스케줄러]</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image6.png', 'MediaPipe 자세 분석 촬영 가이드')">
+                  <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image6.png" alt="MediaPipe 자세 분석 촬영 가이드" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[MediaPipe 촬영 가이드]</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image1.png', '어깨·골반 30° 선열 코칭 알림')">
+                  <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image1.png" alt="어깨·골반 30° 선열 코칭 알림" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[30° 선열 코칭 알림]</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image5.png', '3D 인체도 발생 부위 선택')">
+                  <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image5.png" alt="3D 인체도 발생 부위 선택" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[3D 인체도 부위 선택]</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image4.png', 'AI 상처 판별 & 처치 가이드')">
+                  <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image4.png" alt="AI 상처 판별 & 처치 가이드" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[AI 상처 판별/처치]</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image3.png', '공단평가 제출용 7일 A4 서식')">
+                  <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image3.png" alt="공단평가 제출용 7일 A4 서식" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[공단평가 7일 A4서식]</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ======================================================== -->
+        <!-- PROJECT 02: 힐링레터 (Slide 6)                           -->
+        <!-- ======================================================== -->
+        <article class="mb-20 bg-slate-50/80 rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
+            <div>
+              <span class="inline-block px-3 py-1 bg-brand-navy text-white text-xs font-bold rounded-md mb-2">PROJECT 02</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900">
+                힐링레터 (Healing Letter / PA트라슈)
+              </h3>
+              <p class="text-sm font-semibold text-brand-blue mt-1">
+                ML 기반 물리적 입력 리듬을 활용한 파킨슨 조기 선별 및 보호자 안심 서비스
+              </p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="px-3 py-1.5 bg-amber-100 text-amber-900 font-bold text-xs rounded-lg">머신러닝</span>
+              <span class="px-3 py-1.5 bg-blue-100 text-brand-blue font-bold text-xs rounded-lg">시니어 UX</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">OVERVIEW</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  가족에게 안부를 전하는 일상적인 글쓰기 과정에서 발생하는 타이핑 리듬을 활용해 개인의 미세 운동 변화 흐름을 확인하는 생활밀착형 건강관리 서비스입니다. 매일 한 번 제공되는 '힐링레터'에 답장을 작성하는 자연스러운 일상 행위만으로 거부감 없는 정기적 건강 상태 확인을 유도합니다.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
+                <div class="space-y-1.5 text-xs text-slate-700">
+                  <p><strong class="text-slate-900">Frontend:</strong> Streamlit, Responsive Web UI (Senior-Friendly UX)</p>
+                  <p><strong class="text-slate-900">ML Engine:</strong> Keystroke Dynamics Analysis (Scikit-Learn, Random Forest)</p>
+                  <p><strong class="text-slate-900">Key Tech:</strong> 타이핑 속도, 키 누름 시간(Hold Time), 키 간격 변동성 분석</p>
+                  <p><strong class="text-slate-900">Tool / Deploy:</strong> Python, Pandas, NumPy, VS Code, Streamlit Cloud</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">KEY RESULTS</h4>
+                <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
+                  <li><strong>행동경제학적 UX:</strong> 검사 부담감 없이 자연스러운 안부 편지 답장 과정에서 타이핑 생체 데이터를 수집하는 사용자 여정 설계</li>
+                  <li><strong>보호자 연동 안심 리포트:</strong> 이상 징후 감지 시 보호자에게 즉각 알림 전송 및 주기적 건강 변화 추이 리포트 제공</li>
+                  <li><strong>시니어 맞춤 접근성 UI:</strong> 디지털 취약 고령층을 위한 고대비 큰 글씨 모드 및 직관적인 건강 피드백 인터페이스 구축</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Image Grid (2 Screens) -->
+            <div class="lg:col-span-7">
+              <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-3 flex items-center justify-between">
+                <span>SERVICE SCREENS (클릭 시 확대)</span>
+                <span class="text-[11px] text-brand-blue font-bold">안부 작성 및 분석 리포트</span>
+              </h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image9.png', '힐링레터 안부 편지 작성 화면')">
+                  <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image9.png" alt="힐링레터 안부 편지 작성 화면" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-xs font-bold text-center text-slate-800 mt-3">[힐링레터 일상 안부 편지 UI]</p>
+                </div>
+
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image8.png', '타이핑 리듬 머신러닝 분석 리포트')">
+                  <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image8.png" alt="타이핑 리듬 머신러닝 분석 리포트" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-xs font-bold text-center text-slate-800 mt-3">[ML 타건 리듬 분석 & 안심 리포트]</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ======================================================== -->
+        <!-- PROJECT 03: Heimlich Hero (Slide 7)                      -->
+        <!-- ======================================================== -->
+        <article class="bg-slate-50/80 rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
+            <div>
+              <span class="inline-block px-3 py-1 bg-brand-navy text-white text-xs font-bold rounded-md mb-2">PROJECT 03</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900">
+                Heimlich Hero
+              </h3>
+              <p class="text-sm font-semibold text-brand-blue mt-1">
+                게이미피케이션 및 피지컬 인터랙션 기반 리듬 액션 응급처치 교육용 파이 게임
+              </p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="px-3 py-1.5 bg-emerald-100 text-emerald-900 font-bold text-xs rounded-lg">Pygame</span>
+              <span class="px-3 py-1.5 bg-blue-100 text-brand-blue font-bold text-xs rounded-lg">의학 고증</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">OVERVIEW</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  주입식 교육의 한계를 극복하고 실전 위급 상황에서의 즉각적인 대처 능력을 길러주는 interactive 응급처치 교육 솔루션입니다. 의학적 정밀 고증(2020 대한응급의학회 가이드라인)과 리듬 액션 게임의 융합을 통해, 골든타임 확보를 위한 필수 행동 지침의 직관적 체화를 유도합니다.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
+                <div class="space-y-1.5 text-xs text-slate-700">
+                  <p><strong class="text-slate-900">Engine & Dev:</strong> Python (Pygame), PyInstaller (Standalone .exe)</p>
+                  <p><strong class="text-slate-900">Medical Standard:</strong> 2020 대한응급의학회 하임리히법 가이드라인</p>
+                  <p><strong class="text-slate-900">Key Tech:</strong> BPM 연동 리듬 판정 엔진, 모션 피드백 인터랙션</p>
+                  <p><strong class="text-slate-900">Deployment:</strong> Windows Standalone App (.exe)</p>
+                  <p><strong class="text-slate-900">Tool:</strong> Visual Studio Code, Pygame, Audacity</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">KEY RESULTS</h4>
+                <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
+                  <li><strong>의학 가이드라인 정밀 고증:</strong> 2020 대한응급의학회 기준을 적용하여 성인·영아·임산부 등 환자 특성별 차별화된 응급처치 프로토콜 구현</li>
+                  <li><strong>BPM 연동 리듬 피드백 엔진:</strong> 올바른 압박 주기와 타이밍을 직관적으로 체득할 수 있는 청각·시각 실시간 인터랙션 구축</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Image Grid (3 Screens) -->
+            <div class="lg:col-span-7">
+              <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-3 flex items-center justify-between">
+                <span>GAME & GUIDELINE SCREENS (클릭 시 확대)</span>
+                <span class="text-[11px] text-brand-blue font-bold">의학 가이드 및 게임 플레이</span>
+              </h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image11.png', '환자 특성별 차별화된 응급처치 가이드라인')">
+                  <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image11.png" alt="응급처치 가이드라인" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-xs font-bold text-center text-slate-800 mt-3">[환자 특성별 응급처치 가이드라인]</p>
+                </div>
+
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image10.png', '하임리히 게이미피케이션 화면')">
+                  <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image10.png" alt="게이미피케이션 화면" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-xs font-bold text-center text-slate-800 mt-3">[BPM 연동 리듬 게임 플레이 UI]</p>
+                </div>
+
+                <div class="sm:col-span-2 img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image12.png', '응급처치 인터랙션 상세 화면')">
+                  <div class="aspect-[16/9] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image12.png" alt="응급처치 인터랙션 상세 화면" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-xs font-bold text-center text-slate-800 mt-3">[환자별 압박 부위 & 타이밍 고증 화면]</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 5. INDIVIDUAL PROJECT SECTION (Slide 8 & 9) -->
+    <section id="individual-projects" class="py-20 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-block px-3.5 py-1 rounded-full bg-purple-100 text-purple-800 font-bold text-xs tracking-wider uppercase">
+            02. INDIVIDUAL PROJECT
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            디지털 헬스케어 개인 프로젝트
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600">
+            사회적 약자를 위한 심리 건강 및 신변 안전 구제 플랫폼을 기획하고 풀스택으로 구현했습니다.
+          </p>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PROJECT: 환장연애 (Slide 9)                              -->
+        <!-- ======================================================== -->
+        <article class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
+            <div>
+              <span class="inline-block px-3 py-1 bg-purple-700 text-white text-xs font-bold rounded-md mb-2">INDIVIDUAL PROJECT 01</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900">
+                환장연애
+              </h3>
+              <p class="text-sm font-semibold text-purple-700 mt-1">
+                서버리스 클라우드(BaaS) 기반 관계 폭력 조기 인지 및 신변 안전 구제 플랫폼
+              </p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="px-3 py-1.5 bg-purple-100 text-purple-800 font-bold text-xs rounded-lg">Supabase</span>
+              <span class="px-3 py-1.5 bg-pink-100 text-pink-800 font-bold text-xs rounded-lg">심리/안전 케어</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">OVERVIEW</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  가스라이팅, 데이트 폭력 등 관계 폭력을 인지하지 못하는 피해자들을 위한 디지털 심리 구제 플랫폼입니다. 안전한 삶으로의 이탈을 돕고, 익명 소통 및 즉각적인 긴급 구제를 지원합니다.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
+                <div class="space-y-1.5 text-xs text-slate-700">
+                  <p><strong class="text-slate-900">Frontend:</strong> HTML5, CSS3, Vanilla JavaScript (ES6+)</p>
+                  <p><strong class="text-slate-900">Backend & DB:</strong> Supabase (BaaS), PostgreSQL</p>
+                  <p><strong class="text-slate-900">Key Tech:</strong> Regex, Web Storage API, Camouflage Quick Exit</p>
+                  <p><strong class="text-slate-900">Deployment:</strong> GitHub, Streamlit Cloud</p>
+                  <p><strong class="text-slate-900">Tool:</strong> Visual Studio Code</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">KEY RESULTS</h4>
+                <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
+                  <li><strong>Regex 기반 위험 패턴 분류:</strong> 스토킹·폭력·가스라이팅 등 위험 키워드 자동 분류 엔진 구축</li>
+                  <li><strong>무로그인 실시간 익명 게시판:</strong> Supabase(BaaS)를 활용한 익명 사연 작성, 공감 투표, 댓글 소통 시스템 구현</li>
+                  <li><strong>신변 안전 긴급 위젯:</strong> 긴급 상황 시 즉각 탈출 가능한 퀵 엑시트(화면 위장 모드) 및 1366·112 원터치 핫라인 다이얼 연계 위젯 구현</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Image Grid (4 Screens) -->
+            <div class="lg:col-span-7">
+              <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-3 flex items-center justify-between">
+                <span>PLATFORM SCREENS (클릭 시 확대)</span>
+                <span class="text-[11px] text-purple-700 font-bold">4대 안전 기능</span>
+              </h4>
+              <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image13.png', '환승연애 패러디 노선도: 유독한 관계에서 ➔ 치유와 안전으로의 환승')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image13.png" alt="환승연애 패러디 노선도" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[환승연애 패러디 노선도]</p>
+                </div>
+
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image16.png', '실시간 피드 및 댓글을 통한 관계 폭력 조기 인지')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image16.png" alt="실시간 피드 및 댓글" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[실시간 익명 피드]</p>
+                </div>
+
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image15.png', '24시간 긴급 안심 핫라인을 통한 신변 안전 구제')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image15.png" alt="24시간 긴급 안심 핫라인" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[24시 긴급 안심 핫라인]</p>
+                </div>
+
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('assets/images/image14.png', '즉각 탈출 퀵 엑시트 화면 위장 모드')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="assets/images/image14.png" alt="즉각 탈출 퀵 엑시트 화면" class="w-full h-full object-contain" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[퀵 엑시트 위장 모드]</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 6. OUTRO & CONTACT SECTION (Slide 10) -->
+    <section id="contact" class="py-24 gradient-navy text-white text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
+        
+        <div class="inline-block px-4 py-1 rounded-full bg-brand-gold text-brand-navy font-black text-xs uppercase tracking-widest shadow">
+          THANK YOU
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+          ‘지속 가능한 헬스케어’의 미래를<br />
+          만들어가겠습니다.
+        </h2>
+
+        <p class="text-lg sm:text-xl text-slate-200 font-medium">
+          채유진 | Digital Healthcare
+        </p>
+
+        <!-- Contact Box -->
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 max-w-xl mx-auto border border-white/20 space-y-4">
+          <div class="flex items-center justify-between p-3 bg-white/10 rounded-xl">
+            <div class="flex items-center space-x-3 text-left">
+              <i data-lucide="phone" class="w-5 h-5 text-brand-gold"></i>
+              <div>
+                <span class="text-[11px] text-slate-300 block">Phone</span>
+                <span class="font-bold text-sm">010-8918-8342</span>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('010-8918-8342', '전화번호가 복사되었습니다!')" class="px-3 py-1.5 bg-brand-gold text-brand-navy font-bold text-xs rounded-lg hover:bg-amber-400 transition-colors">
+              복사
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-white/10 rounded-xl">
+            <div class="flex items-center space-x-3 text-left">
+              <i data-lucide="mail" class="w-5 h-5 text-brand-gold"></i>
+              <div>
+                <span class="text-[11px] text-slate-300 block">Email</span>
+                <span class="font-bold text-sm">yujins2chae@gmail.com</span>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('yujins2chae@gmail.com', '이메일 주소가 복사되었습니다!')" class="px-3 py-1.5 bg-brand-gold text-brand-navy font-bold text-xs rounded-lg hover:bg-amber-400 transition-colors">
+              복사
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between p-3 bg-white/10 rounded-xl">
+            <div class="flex items-center space-x-3 text-left">
+              <i data-lucide="github" class="w-5 h-5 text-brand-gold"></i>
+              <div>
+                <span class="text-[11px] text-slate-300 block">GitHub</span>
+                <span class="font-bold text-sm">github.com/ychae22</span>
+              </div>
+            </div>
+            <a href="https://github.com/ychae22" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-white/20 text-white font-bold text-xs rounded-lg hover:bg-white/30 transition-colors">
+              방문
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-6 text-xs text-slate-400">
+          © 2026 Chae Yujin. All rights reserved. Powered by GitHub Pages.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- FULLSCREEN SLIDE PRESENTATION MODE VIEW                  -->
+  <!-- ======================================================== -->
+  <div id="slideDeckView" class="fixed inset-0 z-50 bg-slate-950 text-white flex-col">
+    
+    <!-- Top Control Bar -->
+    <div class="h-14 bg-slate-900 border-b border-slate-800 px-4 sm:px-8 flex items-center justify-between text-xs sm:text-sm">
+      <div class="flex items-center space-x-3">
+        <span class="font-bold text-brand-gold uppercase tracking-wider">채유진 디지털 헬스케어 포트폴리오</span>
+        <span class="text-slate-500">|</span>
+        <span id="slideIndicator" class="font-mono text-slate-300">Slide 1 / 10</span>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <button id="prevSlideTopBtn" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-300">
+          <i data-lucide="chevron-left" class="w-4 h-4 inline"></i> 이전
+        </button>
+        <button id="nextSlideTopBtn" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-300">
+          다음 <i data-lucide="chevron-right" class="w-4 h-4 inline"></i>
+        </button>
+        <button id="exitSlideDeckBtn" class="px-3 py-1.5 bg-rose-600/80 hover:bg-rose-600 text-white font-bold rounded-lg ml-2">
+          웹 뷰로 돌아가기 (ESC)
+        </button>
+      </div>
+    </div>
+
+    <!-- Slide Canvas Area (16:9 Presentation Stage) -->
+    <div class="flex-1 flex items-center justify-center p-4 sm:p-8 bg-slate-950 overflow-hidden">
+      <div class="w-full max-w-6xl aspect-[16/9] bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden relative border border-slate-700 flex flex-col">
+        
+        <!-- Slide 1 -->
+        <div class="slide-item active w-full h-full p-8 sm:p-14 gradient-navy text-white flex-col justify-between" data-slide="1">
+          <div class="flex justify-between items-start">
+            <span class="px-4 py-1.5 bg-brand-gold text-brand-navy font-black text-xs sm:text-sm rounded-full shadow">DIGITAL HEALTHCARE</span>
+            <span class="text-xs font-mono text-blue-200">SLIDE 01</span>
+          </div>
+          <div class="space-y-4">
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black leading-tight text-white">
+              일상 속 건강한 변화를 이끌어내는<br />
+              디지털 헬스케어 기획자,<br />
+              <span class="text-brand-gold">‘채유진’</span> 입니다
+            </h2>
+            <p class="text-sm sm:text-lg text-amber-200 font-semibold tracking-wider">CHAE YUJIN PORTFOLIO</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/20 text-xs sm:text-sm">
+            <div class="space-y-1">
+              <p class="font-bold text-amber-300 uppercase">CONTACT</p>
+              <p>• Email: yujins2chae@gmail.com</p>
+              <p>• Phone: 010-8918-8342</p>
+              <p>• GitHub: github.com/ychae22</p>
+            </div>
+            <div class="flex items-center justify-end">
+              <div class="px-6 py-3 bg-white text-brand-navy font-black text-base rounded-xl border-2 border-brand-gold shadow">
+                MEDICAL × AI
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide-item w-full h-full p-6 sm:p-10 bg-white text-slate-900 flex-col justify-between overflow-y-auto" data-slide="2">
+          <div>
+            <div class="flex justify-between items-center pb-3 border-b border-slate-200">
+              <div>
+                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">CORE COMPETENCIES</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">채유진은 어떤 능력을 가지고 있을까? 저의 핵심 강점 6가지</h2>
+              </div>
+              <span class="text-xs font-mono text-slate-400">SLIDE 02</span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6 text-xs">
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-black text-brand-blue block mb-1">01. 의료·보건 도메인 전문성</span>
+                <p class="text-slate-600">분자생물학 전공 및 GCP 교육 수료, 영문 의학 논문 분석과 IRB/의료 데이터 무결성 이해</p>
+              </div>
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-black text-brand-blue block mb-1">02. Data Literacy</span>
+                <p class="text-slate-600">사용자 데이터 직접 추출·분석, ERP 데이터 QC 경험을 통한 데이터 기반 기획</p>
+              </div>
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-black text-brand-blue block mb-1">03. 초고령화 페인포인트</span>
+                <p class="text-slate-600">시니어·만성질환자 니즈 분석, 실시간 욕창 관리(MediSore) 및 파킨슨 선별 기획</p>
+              </div>
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-black text-brand-blue block mb-1">04. 현장 밀착형 공감</span>
+                <p class="text-slate-600">의료통합봉사회 및 H-점프스쿨 활동으로 취약계층 현장의 진짜 문제를 파악</p>
+              </div>
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-black text-brand-blue block mb-1">05. 유연한 소통력</span>
+                <p class="text-slate-600">어학 AL, 부산국제영화제/피트니스센터 다국적·다연령 고객 응대 실전 커뮤니케이션</p>
+              </div>
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                <span class="font-black text-brand-blue block mb-1">06. 프로토타이핑</span>
+                <p class="text-slate-600">Python, Streamlit, Vision AI를 자유롭게 활용해 작동하는 서비스로 신속 구현/검증</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 text-right pt-2">Chae Yujin Core Competencies</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide-item w-full h-full p-6 sm:p-10 bg-slate-50 text-slate-900 flex-col justify-between overflow-y-auto" data-slide="3">
+          <div>
+            <div class="flex justify-between items-center pb-3 border-b border-slate-200">
+              <div>
+                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">RESUME & SKILLS</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">채유진 | Chae Yujin 프로필 및 상세 이력</h2>
+              </div>
+              <span class="text-xs font-mono text-slate-400">SLIDE 03</span>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mt-4 text-xs">
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-3">
+                <div>
+                  <h4 class="font-bold text-brand-blue mb-1">ACADEMIC</h4>
+                  <p class="font-semibold text-slate-800">부산대 분자생물학과 졸 (3.87/4.5)</p>
+                  <p class="text-[11px] text-slate-500">PCR 분자진단 실험, QC, 영문 논문 분석</p>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-blue mb-1">LICENSES & LANG</h4>
+                  <p>• 토익스피킹 AL (160점) (26.05)</p>
+                  <p>• TOEIC 875점 (25.10)</p>
+                  <p>• 안전교육지도사 1급 (25.01)</p>
+                </div>
+              </div>
+
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-2">
+                <h4 class="font-bold text-brand-blue">TECH STACK</h4>
+                <div>
+                  <div class="flex justify-between text-[11px] font-bold"><span>Python & Streamlit</span><span>94%</span></div>
+                  <div class="w-full h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-brand-blue" style="width: 94%;"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-[11px] font-bold"><span>Vision AI (MediaPipe/YOLO)</span><span>86%</span></div>
+                  <div class="w-full h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-brand-blue" style="width: 86%;"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-[11px] font-bold"><span>Data QC & ERP</span><span>93%</span></div>
+                  <div class="w-full h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-brand-blue" style="width: 93%;"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-[11px] font-bold"><span>Service UX</span><span>95%</span></div>
+                  <div class="w-full h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-brand-blue" style="width: 95%;"></div></div>
+                </div>
+              </div>
+
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-2">
+                <h4 class="font-bold text-brand-blue">WORKS & TRAINING</h4>
+                <p class="text-[11px]"><strong>26.05~:</strong> 디지털 AI & 데이터 부트캠프</p>
+                <p class="text-[11px]"><strong>26.04:</strong> 국가임상시험지원재단 GCP / 고려대의료원 IRB</p>
+                <p class="text-[11px]"><strong>25.10~26.01:</strong> 모어사이언스 경영지원 인턴</p>
+                <p class="text-[11px]"><strong>25.03~25.08:</strong> 의료통합봉사회 독거노인 치매케어</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 text-right pt-2">Chae Yujin Resume</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide-item w-full h-full p-8 sm:p-12 gradient-navy text-white flex-col justify-between" data-slide="4">
+          <div class="flex justify-between items-center">
+            <span class="px-3 py-1 bg-brand-gold text-brand-navy font-bold text-xs rounded-md">TEAM PROJECT</span>
+            <span class="text-xs font-mono text-blue-200">SLIDE 04</span>
+          </div>
+          <div class="space-y-4">
+            <span class="text-5xl font-black text-brand-gold">01</span>
+            <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+              디지털 헬스케어 프로젝트<br />
+              기획 & 기술 구현
+            </h2>
+            <div class="space-y-2 pt-4 text-sm sm:text-base text-slate-200">
+              <p><strong>01. MediSore:</strong> 스마트폰과 비전 AI(MediaPipe/YOLO)를 활용한 실시간 욕창 예방·관리 솔루션</p>
+              <p><strong>02. 힐링레터:</strong> 행동경제학적 UX와 머신러닝 타건 리듬 분석 기반 일상 속 파킨슨 조기 선별 서비스</p>
+              <p><strong>03. Heimlich Hero:</strong> 2020 응급의학회 가이드라인 및 의학적 고증 기반 리듬 액션 응급처치 교육 게임</p>
+            </div>
+          </div>
+          <div class="text-xs text-blue-200 text-right">Team Projects Summary</div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide-item w-full h-full p-6 sm:p-10 bg-white text-slate-900 flex-col justify-between overflow-y-auto" data-slide="5">
+          <div>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+              <div>
+                <span class="text-xs font-bold text-brand-blue uppercase tracking-wider">TEAM PROJECT 01</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">MediSore | 실시간 욕창 예방 체위 코칭 & AI 상처 관리</h2>
+              </div>
+              <span class="text-xs font-mono text-slate-400">SLIDE 05</span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 text-xs">
+              <div class="lg:col-span-5 space-y-2">
+                <p><strong>Overview:</strong> 요양기관 및 간병인을 위한 욕창 예방 체위 스케줄링 & MediaPipe 신체선열 판정 솔루션</p>
+                <p><strong>Tech:</strong> JS (ES6+), Python 3.11, MediaPipe Pose, Canvas 2D, ReportLab A4 PDF</p>
+                <p><strong>Result:</strong> NPUAP 1~4단계 드레싱 가이드, 30° 측위 선열 각도 시각화, 공단평가용 7일 간호기록지 PDF 생성</p>
+              </div>
+              <div class="lg:col-span-7 grid grid-cols-3 gap-2">
+                <img src="assets/images/image2.png" alt="2시간 스케줄러" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image6.png" alt="자세분석 가이드" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image1.png" alt="30도 코칭" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image5.png" alt="3D 인체도" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image4.png" alt="상처 판별" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image3.png" alt="7일 리포트" class="rounded border object-contain h-24 w-full bg-slate-50" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 text-right pt-2">MediSore Showcase</div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide-item w-full h-full p-6 sm:p-10 bg-white text-slate-900 flex-col justify-between overflow-y-auto" data-slide="6">
+          <div>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+              <div>
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">TEAM PROJECT 02</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">힐링레터 | ML 물리적 타건 리듬 활용 파킨슨 조기 선별</h2>
+              </div>
+              <span class="text-xs font-mono text-slate-400">SLIDE 06</span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 text-xs">
+              <div class="lg:col-span-6 space-y-2">
+                <p><strong>Overview:</strong> 일상적인 안부 편지 답장 과정에서 타이핑 리듬을 수집·분석해 파킨슨 조기 징후를 감지하는 안심 서비스</p>
+                <p><strong>Tech:</strong> Streamlit, Scikit-Learn (Random Forest), Keystroke Dynamics Analysis</p>
+                <p><strong>Result:</strong> 행동경제학적 UX 설계, 이상 징후 보호자 실시간 알림, 시니어 고대비 큰글씨 UI 구축</p>
+              </div>
+              <div class="lg:col-span-6 grid grid-cols-2 gap-3">
+                <img src="assets/images/image9.png" alt="안부편지 UI" class="rounded border object-contain h-36 w-full bg-slate-50" />
+                <img src="assets/images/image8.png" alt="분석 리포트" class="rounded border object-contain h-36 w-full bg-slate-50" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 text-right pt-2">Healing Letter Showcase</div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide-item w-full h-full p-6 sm:p-10 bg-white text-slate-900 flex-col justify-between overflow-y-auto" data-slide="7">
+          <div>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+              <div>
+                <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">TEAM PROJECT 03</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">Heimlich Hero | 2020 응급의학회 고증 리듬액션 응급처치 교육</h2>
+              </div>
+              <span class="text-xs font-mono text-slate-400">SLIDE 07</span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 text-xs">
+              <div class="lg:col-span-5 space-y-2">
+                <p><strong>Overview:</strong> 2020 대한응급의학회 하임리히 가이드라인과 리듬 액션을 융합한 게이미피케이션 응급처치 솔루션</p>
+                <p><strong>Tech:</strong> Python (Pygame), PyInstaller (.exe), Audacity</p>
+                <p><strong>Result:</strong> 성인·영아·임산부 환자 특성별 프로토콜 구현, BPM 연동 리듬 판정 피드백 엔진 구축</p>
+              </div>
+              <div class="lg:col-span-7 grid grid-cols-2 gap-2">
+                <img src="assets/images/image11.png" alt="가이드라인" class="rounded border object-contain h-28 w-full bg-slate-50" />
+                <img src="assets/images/image10.png" alt="리듬게임 UI" class="rounded border object-contain h-28 w-full bg-slate-50" />
+                <img src="assets/images/image12.png" alt="상세화면" class="col-span-2 rounded border object-contain h-24 w-full bg-slate-50" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 text-right pt-2">Heimlich Hero Showcase</div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide-item w-full h-full p-8 sm:p-12 bg-slate-900 text-white flex-col justify-between" data-slide="8">
+          <div class="flex justify-between items-center">
+            <span class="px-3 py-1 bg-purple-500 text-white font-bold text-xs rounded-md">INDIVIDUAL PROJECT</span>
+            <span class="text-xs font-mono text-slate-400">SLIDE 08</span>
+          </div>
+          <div class="space-y-4">
+            <span class="text-5xl font-black text-purple-400">02</span>
+            <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+              디지털 헬스케어<br />개인 프로젝트
+            </h2>
+            <div class="space-y-2 pt-4 text-sm sm:text-base text-slate-200">
+              <p><strong>01. 환장연애:</strong> 서버리스 클라우드(BaaS) 기반 관계 폭력 조기 인지 및 신변 안전 구제 플랫폼</p>
+            </div>
+          </div>
+          <div class="text-xs text-slate-400 text-right">Individual Project Summary</div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide-item w-full h-full p-6 sm:p-10 bg-white text-slate-900 flex-col justify-between overflow-y-auto" data-slide="9">
+          <div>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+              <div>
+                <span class="text-xs font-bold text-purple-700 uppercase tracking-wider">INDIVIDUAL PROJECT 01</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">환장연애 | 관계 폭력 조기 인지 및 신변 안전 구제 플랫폼</h2>
+              </div>
+              <span class="text-xs font-mono text-slate-400">SLIDE 09</span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 text-xs">
+              <div class="lg:col-span-5 space-y-2">
+                <p><strong>Overview:</strong> 가스라이팅·데이트 폭력 피해자를 위한 디지털 심리 구제 및 24시 긴급 핫라인 연계 플랫폼</p>
+                <p><strong>Tech:</strong> Vanilla JS, HTML5/CSS3, Supabase (BaaS), PostgreSQL, Regex</p>
+                <p><strong>Result:</strong> Regex 위험 패턴 키워드 자동 분류, 실시간 무로그인 익명 게시판, 퀵 엑시트 위장 모드 & 1366 원터치 다이얼</p>
+              </div>
+              <div class="lg:col-span-7 grid grid-cols-2 gap-2">
+                <img src="assets/images/image13.png" alt="노선도" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image16.png" alt="익명피드" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image15.png" alt="24시 핫라인" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="assets/images/image14.png" alt="퀵 엑시트" class="rounded border object-contain h-24 w-full bg-slate-50" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 text-right pt-2">Escape Love Showcase</div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="slide-item w-full h-full p-8 sm:p-14 gradient-navy text-white flex-col justify-between" data-slide="10">
+          <div class="flex justify-between items-center">
+            <span class="px-4 py-1.5 bg-brand-gold text-brand-navy font-black text-xs sm:text-sm rounded-full">THANK YOU</span>
+            <span class="text-xs font-mono text-blue-200">SLIDE 10</span>
+          </div>
+          <div class="space-y-4 text-center my-auto">
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+              ‘지속 가능한 헬스케어’의 미래를<br />
+              만들어가겠습니다.
+            </h2>
+            <p class="text-base sm:text-xl text-amber-300 font-bold">
+              채유진 | Digital Healthcare
+            </p>
+          </div>
+          <div class="flex justify-between items-center pt-4 border-t border-white/20 text-xs sm:text-sm">
+            <div class="space-y-1">
+              <p>• Phone: 010-8918-8342</p>
+              <p>• Email: yujins2chae@gmail.com</p>
+            </div>
+            <button onclick="exitSlideDeck()" class="px-4 py-2 bg-brand-gold text-brand-navy font-bold rounded-lg hover:bg-amber-400">
+              웹 포트폴리오로 돌아가기
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Slide Navigator Bar -->
+    <div class="h-16 bg-slate-900 border-t border-slate-800 px-4 sm:px-8 flex items-center justify-between">
+      <button id="prevSlideBottomBtn" class="flex items-center space-x-1.5 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs sm:text-sm font-bold">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>이전 슬라이드</span>
+      </button>
+
+      <!-- Slide Dots -->
+      <div id="slideDots" class="flex items-center space-x-1.5 sm:space-x-2">
+        <!-- Generated by JS -->
+      </div>
+
+      <button id="nextSlideBottomBtn" class="flex items-center space-x-1.5 px-4 py-2 bg-brand-gold hover:bg-amber-400 text-brand-navy rounded-lg text-xs sm:text-sm font-bold">
+        <span>다음 슬라이드</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- LIGHTBOX IMAGE MODAL                                     -->
+  <!-- ======================================================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md items-center justify-center p-4 sm:p-8" onclick="closeLightbox(event)">
+    <div class="max-w-5xl w-full bg-slate-900 text-white rounded-2xl overflow-hidden shadow-2xl border border-slate-700 flex flex-col max-h-[90vh]" onclick="event.stopPropagation()">
+      <!-- Header -->
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+        <h4 id="lightboxTitle" class="font-bold text-sm sm:text-base text-amber-300">이미지 미리보기</h4>
+        <button onclick="closeLightbox()" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800" aria-label="닫기">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <!-- Image Body -->
+      <div class="flex-1 p-4 sm:p-6 overflow-auto flex items-center justify-center bg-slate-950">
+        <img id="lightboxImg" src="" alt="확대 이미지" class="max-h-[70vh] w-auto object-contain rounded-lg shadow-lg" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- TOAST NOTIFICATION                                       -->
+  <!-- ======================================================== -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-slate-700 flex items-center space-x-3 text-xs sm:text-sm pointer-events-none">
+    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toastMessage">클립보드에 복사되었습니다!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
