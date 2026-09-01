@@ -36,6 +36,50 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
+  <!-- Robust Image Auto Fallback Handler (Executes before DOM finishes) -->
+  <script>
+    function handleImgError(img) {
+      if (!img.dataset.retryStep) {
+        img.dataset.retryStep = '0';
+      }
+      var step = parseInt(img.dataset.retryStep);
+      var currentSrc = img.getAttribute('src') || '';
+      var filename = currentSrc.split('/').pop().split('?')[0];
+      
+      // Match image number like Image1 or image1
+      var match = filename.match(/^(image|Image)(\d+)(\.[a-zA-Z0-9]+)?$/i);
+      if (match) {
+        var num = match[2];
+        var ext = match[3] || '.png';
+        var candidates = [
+          'Image' + num + '.png',
+          'image' + num + '.png',
+          'Image' + num + '.PNG',
+          'image' + num + '.PNG',
+          'assets/images/image' + num + '.png',
+          'assets/images/Image' + num + '.png',
+          'assets/image' + num + '.png',
+          'assets/Image' + num + '.png',
+          'Image' + num + '.jpg',
+          'image' + num + '.jpg',
+          'Image' + num,
+          'image' + num
+        ];
+        
+        if (step < candidates.length) {
+          var nextSrc = candidates[step];
+          img.dataset.retryStep = (step + 1).toString();
+          if (nextSrc !== currentSrc) {
+            img.src = nextSrc;
+          } else if (step + 1 < candidates.length) {
+            img.dataset.retryStep = (step + 2).toString();
+            img.src = candidates[step + 1];
+          }
+        }
+      }
+    }
+  </script>
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -753,49 +797,49 @@
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 
                 <!-- Feature 1 -->
-                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('image1.png', '2시간 순환 체위 스케줄러')">
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('Image1.png', '2시간 순환 체위 스케줄러')">
                   <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="image1.png" alt="2시간 순환 체위 스케줄러" class="w-full h-full object-contain" />
+                    <img src="Image1.png" alt="2시간 순환 체위 스케줄러" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[2시간 순환 체위 스케줄러]</p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('image2.png', 'MediaPipe 자세 분석 촬영 가이드')">
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('Image2.png', 'MediaPipe 자세 분석 촬영 가이드')">
                   <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="image2.png" alt="MediaPipe 자세 분석 촬영 가이드" class="w-full h-full object-contain" />
+                    <img src="Image2.png" alt="MediaPipe 자세 분석 촬영 가이드" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[MediaPipe 촬영 가이드]</p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('image3.png', '어깨·골반 30° 선열 코칭 알림')">
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('Image3.png', '어깨·골반 30° 선열 코칭 알림')">
                   <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="image3.png" alt="어깨·골반 30° 선열 코칭 알림" class="w-full h-full object-contain" />
+                    <img src="Image3.png" alt="어깨·골반 30° 선열 코칭 알림" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[30° 선열 코칭 알림]</p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('image4.png', '3D 인체도 발생 부위 선택')">
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('Image4.png', '3D 인체도 발생 부위 선택')">
                   <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="image4.png" alt="3D 인체도 발생 부위 선택" class="w-full h-full object-contain" />
+                    <img src="Image4.png" alt="3D 인체도 발생 부위 선택" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[3D 인체도 부위 선택]</p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('image5.png', 'AI 상처 판별 & 처치 가이드')">
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('Image5.png', 'AI 상처 판별 & 처치 가이드')">
                   <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="image5.png" alt="AI 상처 판별 & 처치 가이드" class="w-full h-full object-contain" />
+                    <img src="Image5.png" alt="AI 상처 판별 & 처치 가이드" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[AI 상처 판별/처치]</p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('image6.png', '공단평가 제출용 7일 A4 서식')">
+                <div class="img-zoom-container bg-white p-2 rounded-xl border border-slate-200 shadow-sm" onclick="openLightbox('Image6.png', '공단평가 제출용 7일 A4 서식')">
                   <div class="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="image6.png" alt="공단평가 제출용 7일 A4 서식" class="w-full h-full object-contain" />
+                    <img src="Image6.png" alt="공단평가 제출용 7일 A4 서식" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[공단평가 7일 A4서식]</p>
                 </div>
@@ -863,16 +907,16 @@
               </h4>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 
-                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image8.png', '힐링레터 일상 안부 편지 및 리포트 UI')">
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('Image8.png', '힐링레터 일상 안부 편지 및 리포트 UI')">
                   <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image8.png" alt="힐링레터 안부 편지 화면" class="w-full h-full object-contain" />
+                    <img src="Image8.png" alt="힐링레터 안부 편지 화면" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-xs font-bold text-center text-slate-800 mt-3">[힐링레터 일상 안부 & ML 리포트 UI]</p>
                 </div>
 
-                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image9.png', '당신의 안부와 안심을 전합니다 배너')">
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('Image9.png', '당신의 안부와 안심을 전합니다 배너')">
                   <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image9.png" alt="타이핑 리듬 머신러닝 분석 리포트" class="w-full h-full object-contain" />
+                    <img src="Image9.png" alt="타이핑 리듬 머신러닝 분석 리포트" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-xs font-bold text-center text-slate-800 mt-3">[힐링레터 서비스 배너 & 브랜딩]</p>
                 </div>
@@ -915,7 +959,7 @@
               <div>
                 <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
                 <div class="space-y-1.5 text-xs text-slate-700">
-                  <p><strong class="text-slate-900">Engine & Dev:</strong> Python (Pygame), PyInstaller (Standalone .exe)</p>
+                  <p><strong class="text-slate-900">Engine & Dev:</strong> Python (Pygame), PyInstaller (.exe), Audacity</p>
                   <p><strong class="text-slate-900">Medical Standard:</strong> 2020 대한응급의학회 하임리히법 가이드라인</p>
                   <p><strong class="text-slate-900">Key Tech:</strong> BPM 연동 리듬 판정 엔진, 모션 피드백 인터랙션</p>
                   <p><strong class="text-slate-900">Deployment:</strong> Windows Standalone App (.exe)</p>
@@ -940,23 +984,23 @@
               </h4>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 
-                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image11.png', '환자 특성별 차별화된 응급처치 가이드라인')">
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('Image11.png', '환자 특성별 차별화된 응급처치 가이드라인')">
                   <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image11.png" alt="응급처치 가이드라인" class="w-full h-full object-contain" />
+                    <img src="Image11.png" alt="응급처치 가이드라인" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-xs font-bold text-center text-slate-800 mt-3">[환자 특성별 응급처치 가이드라인]</p>
                 </div>
 
-                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image12.png', '하임리히 게이미피케이션 화면')">
+                <div class="img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('Image12.png', '하임리히 게이미피케이션 화면')">
                   <div class="aspect-[4/3] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image12.png" alt="게이미피케이션 화면" class="w-full h-full object-contain" />
+                    <img src="Image12.png" alt="게이미피케이션 화면" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-xs font-bold text-center text-slate-800 mt-3">[BPM 연동 리듬 게임 플레이 UI]</p>
                 </div>
 
-                <div class="sm:col-span-2 img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image10.png', 'Heimlich Hero 브랜딩 로고')">
+                <div class="sm:col-span-2 img-zoom-container bg-white p-3 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('Image10.png', 'Heimlich Hero 브랜딩 로고')">
                   <div class="aspect-[16/9] bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image10.png" alt="Heimlich Hero 로고" class="w-full h-full object-contain p-4" />
+                    <img src="Image10.png" alt="Heimlich Hero 로고" class="w-full h-full object-contain p-4" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-xs font-bold text-center text-slate-800 mt-3">[Heimlich Hero 브랜딩 로고]</p>
                 </div>
@@ -1046,28 +1090,28 @@
                 
                 <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image13.png', '환승연애 패러디 노선도: 유독한 관계에서 ➔ 치유와 안전으로의 환승')">
                   <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image13.png" alt="환승연애 패러디 노선도" class="w-full h-full object-contain" />
+                    <img src="image13.png" alt="환승연애 패러디 노선도" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[환승연애 패러디 노선도]</p>
                 </div>
 
                 <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image16.png', '실시간 피드 및 댓글을 통한 관계 폭력 조기 인지')">
                   <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image16.png" alt="실시간 피드 및 댓글" class="w-full h-full object-contain" />
+                    <img src="image16.png" alt="실시간 피드 및 댓글" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[실시간 익명 피드]</p>
                 </div>
 
                 <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image14.png', '24시간 긴급 안심 핫라인을 통한 신변 안전 구제 및 퀵 엑시트')">
                   <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image14.png" alt="24시간 긴급 안심 핫라인 및 퀵 엑시트" class="w-full h-full object-contain" />
+                    <img src="image14.png" alt="24시간 긴급 안심 핫라인 및 퀵 엑시트" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[24시 긴급 안심 핫라인 / 퀵 엑시트]</p>
                 </div>
 
                 <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image15.png', '환장연애 브랜딩 로고')">
                   <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image15.png" alt="환장연애 브랜딩 로고" class="w-full h-full object-contain p-4" />
+                    <img src="image15.png" alt="환장연애 브랜딩 로고" class="w-full h-full object-contain p-4" onerror="handleImgError(this)" />
                   </div>
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[환장연애 브랜딩 로고]</p>
                 </div>
@@ -1344,12 +1388,12 @@
                 <p><strong>Result:</strong> NPUAP 1~4단계 드레싱 가이드, 30° 측위 선열 각도 시각화, 공단평가용 7일 간호기록지 PDF 생성</p>
               </div>
               <div class="lg:col-span-7 grid grid-cols-3 gap-2">
-                <img src="image1.png" alt="2시간 스케줄러" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image2.png" alt="자세분석 가이드" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image3.png" alt="30도 코칭" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image4.png" alt="3D 인체도" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image5.png" alt="상처 판별" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image6.png" alt="7일 리포트" class="rounded border object-contain h-24 w-full bg-slate-50" />
+                <img src="Image1.png" alt="2시간 스케줄러" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image2.png" alt="자세분석 가이드" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image3.png" alt="30도 코칭" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image4.png" alt="3D 인체도" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image5.png" alt="상처 판별" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image6.png" alt="7일 리포트" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
               </div>
             </div>
           </div>
@@ -1373,8 +1417,8 @@
                 <p><strong>Result:</strong> 행동경제학적 UX 설계, 이상 징후 보호자 실시간 알림, 시니어 고대비 큰글씨 UI 구축</p>
               </div>
               <div class="lg:col-span-6 grid grid-cols-2 gap-3">
-                <img src="image8.png" alt="안부편지 UI" class="rounded border object-contain h-36 w-full bg-slate-50" />
-                <img src="image9.png" alt="분석 리포트" class="rounded border object-contain h-36 w-full bg-slate-50" />
+                <img src="Image8.png" alt="안부편지 UI" class="rounded border object-contain h-36 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image9.png" alt="분석 리포트" class="rounded border object-contain h-36 w-full bg-slate-50" onerror="handleImgError(this)" />
               </div>
             </div>
           </div>
@@ -1398,9 +1442,9 @@
                 <p><strong>Result:</strong> 성인·영아·임산부 환자 특성별 프로토콜 구현, BPM 연동 리듬 판정 피드백 엔진 구축</p>
               </div>
               <div class="lg:col-span-7 grid grid-cols-2 gap-2">
-                <img src="image11.png" alt="가이드라인" class="rounded border object-contain h-28 w-full bg-slate-50" />
-                <img src="image12.png" alt="리듬게임 UI" class="rounded border object-contain h-28 w-full bg-slate-50" />
-                <img src="image10.png" alt="로고" class="col-span-2 rounded border object-contain h-20 w-full bg-slate-50 p-2" />
+                <img src="Image11.png" alt="가이드라인" class="rounded border object-contain h-28 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image12.png" alt="리듬게임 UI" class="rounded border object-contain h-28 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="Image10.png" alt="로고" class="col-span-2 rounded border object-contain h-20 w-full bg-slate-50 p-2" onerror="handleImgError(this)" />
               </div>
             </div>
           </div>
@@ -1442,10 +1486,10 @@
                 <p><strong>Result:</strong> Regex 위험 패턴 키워드 자동 분류, 실시간 무로그인 익명 게시판, 퀵 엑시트 위장 모드 & 1366 원터치 다이얼</p>
               </div>
               <div class="lg:col-span-7 grid grid-cols-2 gap-2">
-                <img src="image13.png" alt="노선도" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image16.png" alt="익명피드" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image14.png" alt="24시 핫라인 / 퀵 엑시트" class="rounded border object-contain h-24 w-full bg-slate-50" />
-                <img src="image15.png" alt="로고" class="rounded border object-contain h-24 w-full bg-slate-50 p-2" />
+                <img src="image13.png" alt="노선도" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="image16.png" alt="익명피드" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="image14.png" alt="24시 핫라인 / 퀵 엑시트" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="image15.png" alt="로고" class="rounded border object-contain h-24 w-full bg-slate-50 p-2" onerror="handleImgError(this)" />
               </div>
             </div>
           </div>
@@ -1515,7 +1559,7 @@
       </div>
       <!-- Image Body -->
       <div class="flex-1 p-4 sm:p-6 overflow-auto flex items-center justify-center bg-slate-950">
-        <img id="lightboxImg" src="" alt="확대 이미지" class="max-h-[70vh] w-auto object-contain rounded-lg shadow-lg" />
+        <img id="lightboxImg" src="" alt="확대 이미지" class="max-h-[70vh] w-auto object-contain rounded-lg shadow-lg" onerror="handleImgError(this)" />
       </div>
     </div>
   </div>
