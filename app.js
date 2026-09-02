@@ -1,39 +1,40 @@
-// Initialize Lucide Icons & Image Error Fallbacks
+﻿// Global Image Error Fallback Handler
+function handleImgError(img) {
+  if (img.dataset.retriedCount) {
+    const count = parseInt(img.dataset.retriedCount);
+    if (count >= 3) return;
+    img.dataset.retriedCount = count + 1;
+  } else {
+    img.dataset.retriedCount = 1;
+  }
+
+  const currentSrc = img.getAttribute('src') || '';
+  const filename = currentSrc.split('/').pop();
+
+  if (img.dataset.retriedCount === '1') {
+    // Try lowercase image
+    if (filename.startsWith('Image')) {
+      img.src = filename.replace(/^Image/, 'image');
+    } else if (filename.startsWith('image')) {
+      img.src = filename.replace(/^image/, 'Image');
+    } else {
+      img.src = 'assets/' + filename;
+    }
+  } else if (img.dataset.retriedCount === '2') {
+    img.src = 'assets/' + filename;
+  } else if (img.dataset.retriedCount === '3') {
+    img.src = 'assets/images/' + filename;
+  }
+}
+
+// Initialize Lucide Icons & Handlers
 document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) {
     lucide.createIcons();
   }
-  setupImageFallbacks();
   initSlideDeck();
   initNavigation();
 });
-
-// Auto Fallback for Image casing & paths (e.g. image1.png vs Image1.png vs assets/images/image1.png)
-function setupImageFallbacks() {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    img.addEventListener('error', function() {
-      if (this.dataset.retried) return;
-      this.dataset.retried = 'true';
-      
-      const currentSrc = this.getAttribute('src');
-      if (!currentSrc) return;
-
-      const filename = currentSrc.split('/').pop();
-      // Try uppercase 'Image' if was 'image'
-      if (filename.startsWith('image')) {
-        const capitalName = filename.replace(/^image/, 'Image');
-        this.src = capitalName;
-      } else if (filename.startsWith('Image')) {
-        const lowerName = filename.replace(/^Image/, 'image');
-        this.src = lowerName;
-      } else {
-        // Try with assets/images/ prefix
-        this.src = 'assets/images/' + filename;
-      }
-    });
-  });
-}
 
 // Toast notification helper
 function copyToClipboard(text, message = '복사되었습니다!') {
@@ -83,7 +84,10 @@ function openLightbox(src, title = '') {
   const img = document.getElementById('lightboxImg');
   const titleEl = document.getElementById('lightboxTitle');
   if (modal && img) {
-    img.src = src;
+    img.removeAttribute('data-retried-count');
+    // Ensure lowercase image reference
+    const fixedSrc = src.replace(/^Image(\d+\.png)$/, 'image$1');
+    img.src = fixedSrc;
     if (titleEl) titleEl.textContent = title || '이미지 확대보기';
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
