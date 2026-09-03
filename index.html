@@ -272,6 +272,13 @@
                     </span>
                     <span class="text-[11px] text-purple-700 font-bold">BaaS 플랫폼</span>
                   </div>
+                  <div class="flex items-center justify-between p-2.5 bg-blue-50/80 rounded-lg text-slate-700 font-medium">
+                    <span class="flex items-center space-x-2">
+                      <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                      <span>멜라노 체크 (지식 증류 VLM 피부암 리포트 생성)</span>
+                    </span>
+                    <span class="text-[11px] text-blue-700 font-bold">지식 증류 VLM</span>
+                  </div>
                 </div>
               </div>
 
@@ -1120,6 +1127,99 @@
             </div>
           </div>
         </article>
+        <!-- ======================================================== -->
+        <!-- PROJECT 02: 멜라노 체크 (Slide 10)                        -->
+        <!-- ======================================================== -->
+        <article class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm hover:shadow-md transition-shadow mt-8">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200">
+            <div>
+              <span class="inline-block px-3 py-1 bg-blue-700 text-white text-xs font-bold rounded-md mb-2">INDIVIDUAL PROJECT 02</span>
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900">멜라노 체크 (MelanoCheck)</h3>
+              <p class="text-sm font-semibold text-blue-700 mt-1">지식 증류(Knowledge Distillation) VLM 기반 피부암 다중 모달 진단 리포트 자동 생성 플랫폼</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1.5 bg-blue-100 text-blue-800 font-bold text-xs rounded-lg">지식 증류 VLM</span>
+              <span class="px-3 py-1.5 bg-amber-100 text-amber-800 font-bold text-xs rounded-lg">더모스코피 7-Point</span>
+              <a href="https://ychae22.github.io/skin-cancer-report/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-brand-blue hover:bg-blue-800 text-white font-bold text-xs rounded-lg flex items-center space-x-1.5 transition-all shadow-sm hover:scale-105">
+                <span>라이브 데모 바로가기</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">OVERVIEW</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  고가의 전문 장비나 전문의 접근성이 낮은 환경에서 치명적인 악성 흑색종(Melanoma)을 조기에 식별하고 대처할 수 있도록 돕는 멀티모달 AI 스크리닝 플랫폼입니다.<br />
+                  더모스코피 이미지를 바탕으로 7-Point 체크리스트를 정량 분석하고, 환자 맞춤형 해설부터 전문의 표준 임상 소견서까지 다층적 리포트를 자동 생성합니다.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
+                <div class="space-y-1.5 text-xs text-slate-700">
+                  <p><strong class="text-slate-900">AI Engine:</strong> Multimodal VLM (2-Stage Knowledge Distillation), BioMedCLIP (RAG)</p>
+                  <p><strong class="text-slate-900">Clinical Standard:</strong> Mackie 7-Point Checklist (더모스코피 기준)</p>
+                  <p><strong class="text-slate-900">Frontend:</strong> HTML5, CSS3, Vanilla JavaScript (ES6+)</p>
+                  <p><strong class="text-slate-900">Deployment:</strong> GitHub Pages (Web Client-Side Standalone Live)</p>
+                  <p><strong class="text-slate-900">Research Base:</strong> IEEE Access Vol. 13 (2025) 논문 구현</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">KEY RESULTS</h4>
+                <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
+                  <li><strong>2단계 지식 증류(KD) VLM 경량화:</strong> 거대 비전-언어 모델(VLM)을 경량화하여 웹 클라이언트 환경에서도 고성능 피부 병변 분석 및 리포트 실시간 추론 달성</li>
+                  <li><strong>7-Point 체크리스트 자동 정량화:</strong> Major 3종(비정형망·청백색베일·비정형혈관) 및 Minor 4종 특징을 스코어링하여 흑색종 위험군(기준 3점 이상) 정밀 분류</li>
+                  <li><strong>환자·의사 3-Tier 멀티모달 UX:</strong> 비전문가를 위한 쉬운 해설·행동 가이드부터 전문의를 위한 표준 임상 소견서(Findings & Biopsy 권고)까지 다층적 정보 제공</li>
+                  <li><strong>웹 브라우저 단독 무설치 배포:</strong> 서버리스 GitHub Pages 환경에서 클립보드 붙여넣기 및 4대 임상 샘플 진단이 가능한 원스톱 웹 서비스 구현</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Image Grid (4 Screens) -->
+            <div class="lg:col-span-7">
+              <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-3 flex items-center justify-between">
+                <span>PLATFORM SCREENS (클릭 시 확대)</span>
+                <span class="text-[11px] text-blue-700 font-bold">4대 핵심 화면 & 브랜딩</span>
+              </h4>
+
+              <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image17.png', '멜라노 체크 (MelanoCheck) 공식 브랜딩 로고')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center p-3">
+                    <img src="image17.png" alt="멜라노 체크 공식 로고" class="w-full h-full object-contain" onerror="handleImgError(this)" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[멜라노 체크 공식 로고]</p>
+                </div>
+
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image18.png', '더모스코피 사진 업로드 및 지식 증류 VLM 선택 UI')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="image18.png" alt="사진 업로드 & 모델 선택" class="w-full h-full object-contain" onerror="handleImgError(this)" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[더모스코피 사진 등록 & VLM 선택]</p>
+                </div>
+
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image19.png', '3-Tier 멀티모달 임상 리포트 (환자용 해설 & 의사 소견서)')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="image19.png" alt="3-Tier 임상 리포트" class="w-full h-full object-contain" onerror="handleImgError(this)" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[3-Tier 멀티모달 임상 리포트]</p>
+                </div>
+
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image20.png', 'Mackie 7-Point 기준 기반 피부암 위험도 정량 분석')">
+                  <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="image20.png" alt="7-Point 정량 분석" class="w-full h-full object-contain" onerror="handleImgError(this)" />
+                  </div>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[Mackie 7-Point 정량 분석]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
 
       </div>
     </section>
@@ -1464,6 +1564,7 @@
             </h2>
             <div class="space-y-2 pt-4 text-sm sm:text-base text-slate-200">
               <p><strong>01. 환장연애:</strong> 서버리스 클라우드(BaaS) 기반 관계 폭력 조기 인지 및 신변 안전 구제 플랫폼</p>
+              <p><strong>02. 멜라노 체크 (MelanoCheck):</strong> 지식 증류(Knowledge Distillation) 기반 피부암 리포트 자동 생성 플랫폼</p>
             </div>
           </div>
           <div class="text-xs text-slate-400 text-right">Individual Project Summary</div>
@@ -1496,11 +1597,37 @@
           <div class="text-[11px] text-slate-400 text-right pt-2">Escape Love Showcase</div>
         </div>
 
-        <!-- Slide 10 -->
-        <div class="slide-item w-full h-full p-8 sm:p-14 gradient-navy text-white flex-col justify-between" data-slide="10">
+        <!-- Slide 10: MelanoCheck -->
+        <div class="slide-item w-full h-full p-6 sm:p-10 bg-white text-slate-900 flex-col justify-between overflow-y-auto" data-slide="10">
+          <div>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+              <div>
+                <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">INDIVIDUAL PROJECT 02</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">멜라노 체크 (MelanoCheck) | 지식 증류 VLM 피부암 진단 리포트 플랫폼</h2>
+              </div>
+              <span class="text-xs font-mono text-slate-400">SLIDE 10</span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 text-xs">
+              <div class="lg:col-span-5 space-y-2">
+                <p><strong>Overview:</strong> 고가 장비/전문의 접근성이 낮은 환경에서 흑색종 조기 식별을 돕는 멀티모달 AI 스크리닝 플랫폼</p>
+                <p><strong>Tech:</strong> 2-Stage KD VLM, BioMedCLIP (RAG), Mackie 7-Point Checklist, HTML5/CSS3/JS, GitHub Pages</p>
+                <p><strong>Result:</strong> 경량 VLM 실시간 추론, 7-Point 자동 정량화(기준 3점 이상 고위험군), 환자·의사 3-Tier UX, 브라우저 단독 배포</p>
+              </div>
+              <div class="lg:col-span-7 grid grid-cols-2 gap-2">
+                <img src="image18.png" alt="사진 업로드" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="image19.png" alt="3-Tier 리포트" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="image20.png" alt="7-Point 정량 분석" class="rounded border object-contain h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
+                <img src="image17.png" alt="멜라노체크 로고" class="rounded border object-contain h-24 w-full bg-white p-2" onerror="handleImgError(this)" />
+              </div>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 text-right pt-2">MelanoCheck Showcase</div>
+        </div>
+        <!-- Slide 11: THANK YOU -->
+        <div class="slide-item w-full h-full p-8 sm:p-14 gradient-navy text-white flex-col justify-between" data-slide="11">
           <div class="flex justify-between items-center">
             <span class="px-4 py-1.5 bg-brand-gold text-brand-navy font-black text-xs sm:text-sm rounded-full">THANK YOU</span>
-            <span class="text-xs font-mono text-blue-200">SLIDE 10</span>
+            <span class="text-xs font-mono text-blue-200">SLIDE 11</span>
           </div>
           <div class="space-y-4 text-center my-auto">
             <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">

@@ -107,7 +107,7 @@ function closeLightbox(event) {
 
 // Presentation Slide Deck State & Controller
 let currentSlide = 1;
-const totalSlides = 10;
+const totalSlides = 11;
 
 function initSlideDeck() {
   const toggleBtn = document.getElementById('toggleSlideDeckBtn');
