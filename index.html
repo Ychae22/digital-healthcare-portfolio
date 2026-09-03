@@ -1128,6 +1128,7 @@
           </div>
         </article>
         <!-- ======================================================== -->
+        <!-- ======================================================== -->
         <!-- PROJECT 02: 멜라노 체크 (Slide 10)                        -->
         <!-- ======================================================== -->
         <article class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm hover:shadow-md transition-shadow mt-8">
@@ -1139,7 +1140,8 @@
             </div>
             <div class="flex flex-wrap items-center gap-2">
               <span class="px-3 py-1.5 bg-blue-100 text-blue-800 font-bold text-xs rounded-lg">지식 증류 VLM</span>
-              <span class="px-3 py-1.5 bg-amber-100 text-amber-800 font-bold text-xs rounded-lg">더모스코피 7-Point</span>
+              <span class="px-3 py-1.5 bg-amber-100 text-amber-800 font-bold text-xs rounded-lg">Mackie 7-Point</span>
+              <span class="px-3 py-1.5 bg-slate-100 text-slate-800 font-bold text-xs rounded-lg">IEEE Access 2025</span>
               <a href="https://ychae22.github.io/skin-cancer-report/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-brand-blue hover:bg-blue-800 text-white font-bold text-xs rounded-lg flex items-center space-x-1.5 transition-all shadow-sm hover:scale-105">
                 <span>라이브 데모 바로가기</span>
                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
@@ -1161,21 +1163,20 @@
               <div>
                 <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
                 <div class="space-y-1.5 text-xs text-slate-700">
-                  <p><strong class="text-slate-900">AI Engine:</strong> Multimodal VLM (2-Stage Knowledge Distillation), BioMedCLIP (RAG)</p>
-                  <p><strong class="text-slate-900">Clinical Standard:</strong> Mackie 7-Point Checklist (더모스코피 기준)</p>
+                  <p><strong class="text-slate-900">AI Engine:</strong> Multimodal VLM (2-Stage KD), BioMedCLIP (RAG)</p>
                   <p><strong class="text-slate-900">Frontend:</strong> HTML5, CSS3, Vanilla JavaScript (ES6+)</p>
                   <p><strong class="text-slate-900">Deployment:</strong> GitHub Pages (Web Client-Side Standalone Live)</p>
-                  <p><strong class="text-slate-900">Research Base:</strong> IEEE Access Vol. 13 (2025) 논문 구현</p>
+                  <p><strong class="text-slate-900">Research Base:</strong> IEEE Access Vol. 13 (2025) 논문 구현 (Automated Skin Cancer Report Generation via a Knowledge-Distilled Vision-Language Model)</p>
                 </div>
               </div>
 
               <div>
                 <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">KEY RESULTS</h4>
                 <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
-                  <li><strong>2단계 지식 증류(KD) VLM 경량화:</strong> 거대 비전-언어 모델(VLM)을 경량화하여 웹 클라이언트 환경에서도 고성능 피부 병변 분석 및 리포트 실시간 추론 달성</li>
+                  <li><strong>지식 증류(KD) VLM 경량화:</strong> 거대 비전-언어 모델(VLM)을 경량화하여 클라이언트 환경에서도 고성능 피부 병변 분석 및 리포트 실시간 추론 달성</li>
                   <li><strong>7-Point 체크리스트 자동 정량화:</strong> Major 3종(비정형망·청백색베일·비정형혈관) 및 Minor 4종 특징을 스코어링하여 흑색종 위험군(기준 3점 이상) 정밀 분류</li>
                   <li><strong>환자·의사 3-Tier 멀티모달 UX:</strong> 비전문가를 위한 쉬운 해설·행동 가이드부터 전문의를 위한 표준 임상 소견서(Findings & Biopsy 권고)까지 다층적 정보 제공</li>
-                  <li><strong>웹 브라우저 단독 무설치 배포:</strong> 서버리스 GitHub Pages 환경에서 클립보드 붙여넣기 및 4대 임상 샘플 진단이 가능한 원스톱 웹 서비스 구현</li>
+                  <li><strong>실시간 웹 원스톱 스크리닝:</strong> 클립보드 이미지 붙여넣기 및 4대 대표 임상 샘플(흑색종/모반/찰과상/정상) 기반 실시간 즉시 분석 구현</li>
                 </ul>
               </div>
             </div>
@@ -1195,25 +1196,25 @@
                   <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[멜라노 체크 공식 로고]</p>
                 </div>
 
-                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image18.png', '더모스코피 사진 업로드 및 지식 증류 VLM 선택 UI')">
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image18.png', '더모스코피 사진 업로드 및 지식 증류 VLM 선택')">
                   <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image18.png" alt="사진 업로드 & 모델 선택" class="w-full h-full object-contain" onerror="handleImgError(this)" />
+                    <img src="image18.png" alt="더모스코피 사진 업로드" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
-                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[더모스코피 사진 등록 & VLM 선택]</p>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[더모스코피 사진 업로드]</p>
                 </div>
 
-                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image19.png', '3-Tier 멀티모달 임상 리포트 (환자용 해설 & 의사 소견서)')">
+                <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image19.png', '멀티모달 임상 리포트: 환자용 해설 & 의사 소견서')">
                   <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
-                    <img src="image19.png" alt="3-Tier 임상 리포트" class="w-full h-full object-contain" onerror="handleImgError(this)" />
+                    <img src="image19.png" alt="멀티모달 임상 리포트" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
-                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[3-Tier 멀티모달 임상 리포트]</p>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[멀티모달 임상 리포트: 환자용 해설 & 의사 소견서]</p>
                 </div>
 
                 <div class="img-zoom-container bg-slate-50 p-2.5 rounded-2xl border border-slate-200 shadow-sm" onclick="openLightbox('image20.png', 'Mackie 7-Point 기준 기반 피부암 위험도 정량 분석')">
                   <div class="aspect-[4/3] bg-white rounded-xl overflow-hidden flex items-center justify-center">
                     <img src="image20.png" alt="7-Point 정량 분석" class="w-full h-full object-contain" onerror="handleImgError(this)" />
                   </div>
-                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[Mackie 7-Point 정량 분석]</p>
+                  <p class="text-[11px] font-bold text-center text-slate-800 mt-2 truncate">[Mackie 7-Point 기준 기반 위험도 정량 분석]</p>
                 </div>
               </div>
             </div>
