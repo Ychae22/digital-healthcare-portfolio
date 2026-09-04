@@ -63,9 +63,9 @@ digital-healthcare-portfolio/
   - [🌐 라이브 데모 바로가기](https://ychae22.github.io/skin-cancer-report/) | [📁 GitHub / README](https://github.com/Ychae22/skin-cancer-report)
   - 논문 구현: *Automated Skin Cancer Report Generation via a Knowledge-Distilled Vision-Language Model* (IEEE Access 2025)
   - 핵심 기술: 2-Stage KD VLM, BioMedCLIP (RAG), Mackie 7-Point Checklist 자동 정량 분석, 3-Tier 환자/의사 리포트
-- **03. ME:BE ATELIER (미:비 아뜰리에)**: AI 솔루션 상용화 | 원하는 추구미를 골라 내 얼굴에 맞게 실현하는 30일 맞춤형 외형 컨설팅 플랫폼
+- **03. ME:BE ATELIER (미:비 아뜰리에)**: 도달가능미(ME) 와 추구미(BE)의 간극 줄이기 | 30일 맞춤형 외형 솔루션 하이엔드 뷰티테크 &amp; 웰니스 플랫폼
   - [🌐 라이브 서비스 바로가기](https://ychae22.github.io/mebe/) | [📁 GitHub / README](https://github.com/Ychae22/mebe)
-  - 핵심 기술: React 18, Vite, Tailwind CSS, HTML5 Canvas 2D 실시간 픽셀 스캔 & Horizontal Edge Intensity(수평 에지 미분) 랜드마크 자동 검출, 안면 3분할 황금비율 및 중안부 정밀 계측, 턱선 슬림각(atan2), 볼 영역 RGB 상대 휘도 기반 파운데이션 셰이드/언더톤 판별, 청담 VIP 살롱/클리닉 상용화 연계
+  - 핵심 기술: React 18, Vite 5, Tailwind CSS 3.4 (Strict B&amp;W High-End Editorial System 적용), Lucide React, HTML5 Canvas 2D API, Horizontal Edge Intensity 랜드마크 자동 검출, 안면 3분할 황금비율 및 중안부 비율(midRatio), 하악각 슬림 각도(atan2), 좌우 대칭도 분석
 
 ---
 

@@ -1278,32 +1278,41 @@
             <div class="lg:col-span-5 space-y-6">
               <div>
                 <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">OVERVIEW</h4>
+                <p class="text-sm font-bold text-slate-900 mb-2">도달가능미(ME) 와 추구미(BE)의 간극 줄이기</p>
+                <p class="text-sm text-slate-700 leading-relaxed mb-2">
+                  개인의 고유한 얼굴 골격 비율과 피부 특성을 AI 생체 스캔으로 정밀 진단하고, 목표하는 미적 페르소나와의 격차를 분석해 30일 맞춤형 외형 솔루션을 제안하는 하이엔드 뷰티테크 &amp; 웰니스 플랫폼입니다.
+                </p>
                 <p class="text-sm text-slate-700 leading-relaxed">
-                  "도달가능미(ME)에서 추구미(BE)로의 과학적 수렴"을 모토로, 개인의 고유한 얼굴 골격 비율과 피부 특성을 AI 생체 스캔으로 정밀 진단하고, 목표하는 미적 페르소나와의 격차를 분석하여 30일 맞춤형 외형 솔루션을 제안하는 하이엔드 뷰티테크 &amp; 웰니스 플랫폼입니다.<br />
-                  청담동 최고급 헤어살롱, 피부과·성형외과 시술, 메이크업 아티스트 협업 패키지를 결합하여 온라인 자가진단에서 오프라인 시술 예약까지 이어지는 상용화 비즈니스 모델(B2B/B2C)을 완성했습니다.
+                  온라인 자가진단 결과를 청담동 최고급 헤어살롱, 피부과·성형외과 시술, 메이크업 전문가와의 협업 패키지로 연결하여, 진단에서 오프라인 예약 및 시술로 자연스럽게 이어지는 상용화 비즈니스 모델(B2B/B2C)을 완성했습니다.
                 </p>
               </div>
 
               <div>
                 <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">TECHNOLOGY</h4>
                 <div class="space-y-1.5 text-xs text-slate-700">
-                  <p><strong class="text-slate-900">Frontend &amp; Design:</strong> React 18 (18.3.1), Vite 5, Tailwind CSS 3.4 (Strict B&amp;W High-End Editorial System), Lucide React</p>
-                  <p><strong class="text-slate-900">Biometric Face Engine:</strong> HTML5 Canvas 2D API (실시간 픽셀 스캐닝 &amp; willReadFrequently 최적화 클라이언트 엔진)</p>
-                  <p><strong class="text-slate-900">Landmark Detection:</strong> Horizontal Edge Intensity (수평 에지 1차 미분 &amp; 윈도우 스무딩 필터) 기반 헤어라인·눈·코·턱 Y축 랜드마크 자동 검출</p>
-                  <p><strong class="text-slate-900">Clinical Metrics:</strong> 안면 삼분할(상·중·하안부) 황금비율 정밀 계측, 중안부 비율(midRatio), 하악각 슬림 각도(atan2 기하학), 좌우 대칭도(휘도 편차 기반)</p>
-                  <p><strong class="text-slate-900">Skin Undertone Engine:</strong> 볼 중앙 영역 RGB 샘플링 &amp; 상대 휘도(0.299R+0.587G+0.114B) 기반 파운데이션 셰이드(19~23호) 및 쿨/웜/뉴트럴 언더톤 판별</p>
-                  <p><strong class="text-slate-900">Commercial Architecture:</strong> 청담 메디컬(피부과·성형외과 울쎄라/쥬베룩) &amp; 헤어살롱 4-in-1 VIP 패키지 커머스 및 예약 연동</p>
-                  <p><strong class="text-slate-900">Deployment:</strong> GitHub Pages (Client-Side Production Live)</p>
+                  <p><strong class="text-slate-900">Frontend &amp; Design:</strong> React 18, Vite 5, Tailwind CSS 3.4 (Strict B&amp;W High-End Editorial System 적용), Lucide React</p>
+                  <p><strong class="text-slate-900">Biometric Face Engine:</strong> HTML5 Canvas 2D API</p>
+                  <p><strong class="text-slate-900">Landmark Detection:</strong> Horizontal Edge Intensity (수평 에지 1차 미분 및 윈도우 스무딩 필터) 기반 헤어라인·눈·코·턱 Y축 랜드마크 자동 검출</p>
+                  <p><strong class="text-slate-900">Clinical Metrics:</strong> 안면 3분할 황금비율 정밀 계측, 중안부 비율(midRatio), 하악각 슬림 각도(atan2 기하학), 좌우 대칭도(휘도 편차 기반) 분석</p>
+                  <p><strong class="text-slate-900">Deployment:</strong> GitHub Pages</p>
                 </div>
               </div>
 
               <div>
                 <h4 class="text-xs font-black tracking-widest text-slate-400 uppercase mb-2">KEY RESULTS</h4>
-                <ul class="space-y-2 text-xs text-slate-700 list-disc list-inside">
-                  <li><strong>Canvas 2D 실시간 생체 계측:</strong> 외부 서버 전송 없이 브라우저 내에서 픽셀 미분 필터로 안면 3분할, 턱선 슬림각(27.5°), 눈꼬리 각도(12.0°) 정밀 측정</li>
-                  <li><strong>ME-BE 수렴 격차 분석 엔진:</strong> 골격 비율 편차와 대칭도 보너스를 종합한 도달가능미(ME) 지수 산출 및 목표 추구미(BE, +32%p 수렴) 달성 로드맵 도출</li>
-                  <li><strong>에디토리얼 무드보드 &amp; 아카이브:</strong> 올드머니, 발레코어, 프렌치 미니멀 등 스타일 페르소나 큐레이션 및 30일 단계별 실행 플랜 제공</li>
-                  <li><strong>청담 프라이빗 VIP 커머스 연계:</strong> 청담동 성형·피부 클리닉 시술(울쎄라/인모드) 및 프리미엄 살롱 예약 연동 상용화 비즈니스 모델 구축</li>
+                <ul class="space-y-3 text-xs text-slate-700 list-disc list-inside">
+                  <li>
+                    <strong class="text-slate-900">서버리스(Serverless) 실시간 생체 계측 구현:</strong>
+                    외부 서버 전송이나 API 호출 없이, 브라우저 내 클라이언트 엔진과 픽셀 미분 필터만으로 안면 3분할, 턱선 슬림각(27.5°), 눈꼬리 각도(12.0°) 등을 정밀 측정하는 안전하고 빠른 진단 환경을 구축했습니다.
+                  </li>
+                  <li>
+                    <strong class="text-slate-900">ME-BE 수렴 격차 분석 엔진 및 로드맵 도출:</strong>
+                    개인의 골격 비율 편차와 대칭도 가중치를 종합하여 현재의 '도달가능미(ME) 지수'를 산출하고, 사용자가 원하는 '추구미(BE)'와의 간극을 좁히는 데이터 기반 로드맵을 설계했습니다.
+                  </li>
+                  <li>
+                    <strong class="text-slate-900">에디토리얼 무드보드 &amp; 30일 솔루션 큐레이션:</strong>
+                    올드머니, 발레코어, 프렌치 미니멀 등 세분화된 스타일 페르소나를 큐레이션하고, 이를 실제로 구현하기 위한 30일 단위의 단계별 뷰티·웰니스 실행 플랜을 제공합니다.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1783,9 +1792,9 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 text-xs">
               <div class="lg:col-span-5 space-y-2">
-                <p><strong>Overview:</strong> 개인의 얼굴 골격 비율(ME)을 클라이언트 픽셀 미분 엔진으로 정밀 진단하고 목표 추구미(BE)로의 30일 맞춤형 로드맵을 제공하는 상용화 에스테틱 플랫폼</p>
-                <p><strong>Tech:</strong> React 18, Vite, Tailwind CSS, HTML5 Canvas 2D 실시간 픽셀 스캔, Horizontal Edge Intensity 랜드마크 분석, RGB 상대 휘도 언더톤 판별</p>
-                <p><strong>Result:</strong> 안면 3분할 황금비율·중안부 정밀 측정, 턱선 슬림각(27.5°), ME-BE 도달 지수 산출, 청담 헤어살롱·피부클리닉 VIP 패키지 상용화</p>
+                <p><strong>Overview:</strong> 도달가능미(ME) 와 추구미(BE)의 간극 줄이기 | 고유 얼굴 골격과 피부를 AI 생체 스캔으로 진단하고 30일 맞춤형 솔루션을 제안하는 뷰티테크 플랫폼</p>
+                <p><strong>Tech:</strong> React 18, Vite 5, Tailwind CSS 3.4 (Strict B&amp;W High-End Editorial System 적용), HTML5 Canvas 2D API, Horizontal Edge Intensity 랜드마크 자동 검출</p>
+                <p><strong>Result:</strong> 서버리스 실시간 생체 계측(안면 3분할, 턱선 슬림각 27.5°, 눈꼬리 각도 12.0°), ME-BE 수렴 격차 분석 로드맵, 에디토리얼 무드보드 &amp; 30일 큐레이션</p>
               </div>
               <div class="lg:col-span-7 grid grid-cols-2 gap-2">
                 <img src="mebe_screen1.png" alt="ME 페이스 생체 비율 분석" class="rounded border object-cover h-24 w-full bg-slate-50" onerror="handleImgError(this)" />
