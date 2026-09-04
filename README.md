@@ -47,7 +47,7 @@ digital-healthcare-portfolio/
 
 ### 2. Team Projects
 - **01. MediSore**: 비전 AI & ML 기반 욕창 예방 체위 코칭 및 욕창 관리 B2B SaaS
-  - [🌐 라이브 랜딩페이지 접속](https://ychae22.github.io/medisore-saas/) | [📁 GitHub / README](https://github.com/Ychae22/medisore-saas)
+  - [🎮 라이브 데모 직접 체험](https://ychae22.github.io/Medisore/) | [🌐 라이브 랜딩페이지 접속](https://ychae22.github.io/medisore-saas/) | [📁 GitHub / README](https://github.com/Ychae22/medisore-saas)
   - 핵심 기술: MediaPipe 33개 관절 좌표 분석, NPUAP 4단계 판정, 7일 간호기록지 A4 PDF 자동 생성
 - **02. 힐링레터 (PA트라슈)**: ML 물리적 타건 리듬 분석 기반 파킨슨 조기 선별 및 보호자 안심 서비스
   - 핵심 기술: Keystroke Dynamics Analysis, Random Forest 머신러닝, 시니어 고대비 UX
@@ -65,7 +65,7 @@ digital-healthcare-portfolio/
   - 핵심 기술: 2-Stage KD VLM, BioMedCLIP (RAG), Mackie 7-Point Checklist 자동 정량 분석, 3-Tier 환자/의사 리포트
 - **03. ME:BE ATELIER (미:비 아뜰리에)**: AI 솔루션 상용화 | 원하는 추구미를 골라 내 얼굴에 맞게 실현하는 30일 맞춤형 외형 컨설팅 플랫폼
   - [🌐 라이브 서비스 바로가기](https://ychae22.github.io/mebe/) | [📁 GitHub / README](https://github.com/Ychae22/mebe)
-  - 핵심 기술: React 18, Vite, Tailwind CSS, MediaPipe 생체 비율 정밀 측정(중안부/황금비), 12개 영역 ME-BE 진단, 청담 VIP 살롱/클리닉 상용화 연계
+  - 핵심 기술: React 18, Vite, Tailwind CSS, HTML5 Canvas 2D 실시간 픽셀 스캔 & Horizontal Edge Intensity(수평 에지 미분) 랜드마크 자동 검출, 안면 3분할 황금비율 및 중안부 정밀 계측, 턱선 슬림각(atan2), 볼 영역 RGB 상대 휘도 기반 파운데이션 셰이드/언더톤 판별, 청담 VIP 살롱/클리닉 상용화 연계
 
 ---
 
