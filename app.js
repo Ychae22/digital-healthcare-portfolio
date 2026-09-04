@@ -1,4 +1,4 @@
-﻿// Global Image Error Fallback Handler
+// Global Image Error Fallback Handler
 function handleImgError(img) {
   if (img.dataset.retriedCount) {
     const count = parseInt(img.dataset.retriedCount);
@@ -107,7 +107,7 @@ function closeLightbox(event) {
 
 // Presentation Slide Deck State & Controller
 let currentSlide = 1;
-const totalSlides = 11;
+const totalSlides = 12;
 
 function initSlideDeck() {
   const toggleBtn = document.getElementById('toggleSlideDeckBtn');

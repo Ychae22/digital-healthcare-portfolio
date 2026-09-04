@@ -46,12 +46,26 @@ digital-healthcare-portfolio/
 6. **신속한 프로토타이핑**: Python, Streamlit, MediaPipe, YOLO 기반 빠른 PoC 구현 및 검증
 
 ### 2. Team Projects
-- **01. MediSore**: 비전 AI & ML 기반 욕창 예방 체위 코칭 및 욕창 관리 서비스 (MediaPipe 33개 관절 좌표 분석, NPUAP 판정, 7일 간호기록지 A4 PDF)
+- **01. MediSore**: 비전 AI & ML 기반 욕창 예방 체위 코칭 및 욕창 관리 B2B SaaS
+  - [🌐 라이브 랜딩페이지 접속](https://ychae22.github.io/medisore-saas/) | [📁 GitHub / README](https://github.com/Ychae22/medisore-saas)
+  - 핵심 기술: MediaPipe 33개 관절 좌표 분석, NPUAP 4단계 판정, 7일 간호기록지 A4 PDF 자동 생성
 - **02. 힐링레터 (PA트라슈)**: ML 물리적 타건 리듬 분석 기반 파킨슨 조기 선별 및 보호자 안심 서비스
+  - 핵심 기술: Keystroke Dynamics Analysis, Random Forest 머신러닝, 시니어 고대비 UX
 - **03. Heimlich Hero**: 2020 대한응급의학회 가이드라인 고증 기반 리듬 액션 응급처치 교육 게임
+  - [📁 GitHub Repository](https://github.com/Ychae22/Heimlich-Hero)
+  - 핵심 기술: Pygame, BPM 연동 판정 엔진, 환자별(성인/영아/임산부) 프로토콜
 
-### 3. Individual Project
-- **01. 환장연애**: 서버리스 클라우드(Supabase BaaS) 기반 관계 폭력 조기 인지 및 신변 안전 구제 플랫폼
+### 3. Individual Projects
+- **01. 환장연애 (EXChange)**: 서버리스 클라우드(BaaS) 기반 관계 폭력 조기 인지 및 신변 안전 구제 플랫폼
+  - [🌐 라이브 서비스 바로가기](https://ychae22.github.io/hwanjang-love/) | [📁 GitHub / README](https://github.com/Ychae22/hwanjang-love)
+  - 핵심 기술: Supabase (PostgreSQL), 무로그인 실시간 익명 게시판, 24시 긴급 안심 핫라인 & 퀵 엑시트 위장 모드
+- **02. 멜라노 체크 (MelanoCheck)**: 지식 증류(Knowledge Distillation) VLM 기반 피부암 다중 모달 진단 리포트 자동 생성 플랫폼
+  - [🌐 라이브 데모 바로가기](https://ychae22.github.io/skin-cancer-report/) | [📁 GitHub / README](https://github.com/Ychae22/skin-cancer-report)
+  - 논문 구현: *Automated Skin Cancer Report Generation via a Knowledge-Distilled Vision-Language Model* (IEEE Access 2025)
+  - 핵심 기술: 2-Stage KD VLM, BioMedCLIP (RAG), Mackie 7-Point Checklist 자동 정량 분석, 3-Tier 환자/의사 리포트
+- **03. ME:BE ATELIER (미:비 아뜰리에)**: AI 솔루션 상용화 | 원하는 추구미를 골라 내 얼굴에 맞게 실현하는 30일 맞춤형 외형 컨설팅 플랫폼
+  - [🌐 라이브 서비스 바로가기](https://ychae22.github.io/mebe/) | [📁 GitHub / README](https://github.com/Ychae22/mebe)
+  - 핵심 기술: React 18, Vite, Tailwind CSS, MediaPipe 생체 비율 정밀 측정(중안부/황금비), 12개 영역 ME-BE 진단, 청담 VIP 살롱/클리닉 상용화 연계
 
 ---
 
